@@ -1,6 +1,214 @@
 //- title: Index Page
 extends layouts/_layout
 block head
-  - var title = 'Main page'
+  - var title = 'Главная'
 block content
-  h1 Index page
+  // start promo
+  section.promo 
+    .promo-inner
+      // start promo-top
+      .promo-top
+        nav.promo-navigation
+          a.promo-top-link.active(href="#" data-aos="fade-up" data-aos-anchor=".promo")
+            .wrap
+              h3 Газета в подарок
+              p на день рождения
+              img(src="images/pravda-small.jpg" alt="Газета в подарок")
+          a.promo-top-link(href="#" data-aos="fade-up" data-aos-anchor=".promo")
+            .wrap
+              h3 Книга «Правда»
+              p на день рождения
+              img(src="images/pravda-small.jpg" alt="Газета в подарок")
+          a.promo-top-link(href="#" data-aos="fade-up" data-aos-anchor=".promo")
+            .wrap
+              h3 Газета в подарок
+              p на юбилей свадьбы
+      // end promo-top
+      // start promo-middle
+      .promo-middle 
+        .promo-leftside(data-aos="fade-left" data-aos-delay="1000" data-aos-anchor=".promo")
+          h1 Газета «Правда» — оригинальный подарок #[br]на День рождения!
+          .promo-leftside-lined
+            .range
+              .range-block
+                span.word от
+                .price 
+                  span 1390
+              .range-block
+                span.word до
+                .price 
+                  span 2390
+                  i.ruble e
+            a.btn.btn-orange.btn-icon(href="#")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+          .promo-leftside-additional
+            h4 Подарок включает полный комплект:
+            ul.reset-list.promo-leftside-list
+              li 
+                img(src="images/add-feature1.png" alt="Рамка")
+                span.text Газету со статьей об имениннике и его фото
+              li 
+                img(src="images/add-feature2.png" alt="Газета")
+                span.text Багетную рамку (или тубус). #[a(href="#") Выбор рамок]
+              li 
+                img(src="images/add-feature1.png" alt="Газета")
+                span.text Подарочную коробку и фирменный пакет
+              li 
+                img(src="images/add-feature2.png" alt="Газета")
+                span.text Набор крепежей на стену
+        .promo-center(data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".promo")
+          .wrap
+            img.pravda-newspaper-pic(src="images/pravda-large.png" alt="Газета Правда")
+            .num.num1(data-aos="fade-down" data-aos-delay="3000" data-aos-duration="300" data-aos-anchor=".promo") 1
+            .num.num2(data-aos="fade-down" data-aos-delay="4000" data-aos-duration="300" data-aos-anchor=".promo") 2
+            .num.num3(data-aos="fade-down" data-aos-delay="5000" data-aos-duration="300" data-aos-anchor=".promo") 3
+            .num.num4(data-aos="fade-down" data-aos-delay="6000" data-aos-duration="300" data-aos-anchor=".promo") 4
+            .num.num5(data-aos="fade-down" data-aos-delay="7000" data-aos-duration="300" data-aos-anchor=".promo") 5
+            .lines
+              include data/lines.svg
+        .promo-rightside(data-aos="fade-right" data-aos-delay="3000" data-aos-anchor=".promo")
+          ul.reset-list.item-features-list
+            li 
+              .ic-wrap
+                img(src="images/pravda-pic1.jpg" alt="Газета Правда")
+              .text Архивный номер датированный днем рождения именинника 
+            li 
+              .ic-wrap
+                img(src="images/pravda-pic2.jpg" alt="Газета Правда")
+              .text Фото именинника 
+            li 
+              .ic-wrap
+                img(src="images/pravda-pic3.jpg" alt="Газета Правда")
+              .text Статья о рождении именинника 
+            li 
+              .ic-wrap
+                img(src="images/pravda-pic4.jpg" alt="Газета Правда")
+              .text Реальные статьи из прошлого #[a(href="#") Выбрать статью]
+            li 
+              .ic-wrap
+                img(src="images/pravda-pic5.jpg" alt="Газета Правда")
+              .text Багетная рамка на #[a(href="#") Ваш выбор]
+          .promo-video(data-aos="zoom-out" data-aos-delay="8000" data-aos-anchor=".promo")
+            a.promo-video-link.popup-link(href="#popup-video")
+              img(src="images/video.jpg" alt="Видео")
+      // end promo-middle
+      // start promo-bottom
+      .promo-bottom(data-aos="fade-in" data-aos-delay="9000" data-aos-anchor=".promo")
+        .promo-bottom-links
+          a.promo-bottom-link(href="#")
+            .circle
+              include data/picture.svg
+            span 100% гарантия достоверности
+          a.promo-bottom-link(href="#")
+            .circle
+              include data/picture.svg
+            span Передача о нас на радио ”Эхо Москвы”
+        .share-block
+          .share-text
+            include data/mail.svg
+            span.text Поделиться
+          .ya-share2(data-services="vkontakte,odnoklassniki,twitter,facebook")
+      // end promo-bottom
+  // end promo
+  // start gallery
+  section.gallery 
+    .container
+      h2.section-heading.colored-red(data-aos="fade-down" data-aos-anchor=".gallery") Примеры наших работ
+      h4(data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="1000") Вам не нужно писать статью самим. Все уже готово! 
+      p(data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="1800") В форме заказа вы можете выбрать шаблон статьи для газеты ко дню рождения или не добавлять свою статью
+      .lamps(data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="2600")
+        .lamp
+        .lamp.lamp-center
+        .lamp.lamp-right
+      .gallery-slider.swiper-container
+        .swiper-wrapper
+          // start slide
+          .swiper-slide
+            .pic-big(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="0")
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini(data-aos="fade-down" data-aos-anchor=".gallery-slider" data-aos-delay="800")
+                img(src="images/gallery2.jpg")
+              .pic-mini(data-aos="fade-down" data-aos-anchor=".gallery-slider" data-aos-delay="1200")
+                img(src="images/gallery3.jpg")
+              .pic-mini(data-aos="fade-up" data-aos-anchor=".gallery-slider" data-aos-delay="1600")
+                img(src="images/gallery2.jpg")
+              .pic-mini(data-aos="fade-up" data-aos-anchor=".gallery-slider" data-aos-delay="2000")
+                img(src="images/gallery3.jpg")
+            .pic-big(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="400")
+              img(src="images/gallery1.jpg")
+          // end slide
+          // start slide
+          .swiper-slide
+            .pic-big 
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+            .pic-big
+              img(src="images/gallery1.jpg")
+          // end slide
+          // start slide
+          .swiper-slide
+            .pic-big 
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+            .pic-big
+              img(src="images/gallery1.jpg")
+          // end slide
+          // start slide
+          .swiper-slide
+            .pic-big 
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+            .pic-big
+              img(src="images/gallery1.jpg")
+          // end slide
+        .swiper-pagination
+  // end gallery
+  // start reviews
+  section.reviews 
+    .reviews-top
+      h2.section-heading
+      a.leave-review-link(href="#")
+        .circle
+          include data/pero.svg
+        span.text Оставить отзыв
+      .reviews-slider.swiper-container
+        a.arr.arr-left(href="#" role="button")
+        a.arr.arr-right(href="#" role="button")
+        .swiper-wrapper
+          .swiper-slide
+            .reviews-item
+              .date
+                span.icon-calendar
+                span 26.04.2017
+              h4.reviews-item-name Светлана
+              p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+        a.all-reviews-link Все отзывы
+        .swiper-pagination
+  // end reviews

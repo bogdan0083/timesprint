@@ -1,0 +1,130 @@
+/* start header */
+.header
+  font-size: 15px
+  text-align: center
+  padding-top: 10px
+  padding-bottom: 10px
+  width: 100%
+  +rmin($screen-sm)
+    font-size: 15px
+    position: fixed
+    top: 0
+    text-align: left
+    z-index: 100
+    background-color: white
+  +rmin($screen-md)
+    font-size: 17px
+    padding-top: 30px
+  .logo
+    width: 170px
+    float: left
+    +rmin($screen-sm)
+      width: 120px
+    +rmin($screen-md)
+      width: 220px
+    +rmin($screen-lg)
+      width: auto
+  &-address
+    clear: both
+    address
+      font-style: normal
+      display: inline-block
+      line-height: 1
+      vertical-align: top
+      margin-right: 10px
+      color: #383838
+      position: relative
+      top: 1px
+    +rmin($screen-lg)
+      margin-top: 17px
+  &-phones
+    text-decoration: none
+    margin-bottom: 10px
+    +rmin(370px)
+      margin-left: -10px
+      margin-right: -10px
+    +rmin($screen-sm)
+      margin-bottom: 0
+      margin-left: 0
+      margin-right: 0
+    +rmin($screen-lg)
+      margin-top: 14px
+    .phone
+      display: block
+      text-decoration: none
+      line-height: 1.3
+      font-size: 20px
+      color: inherit
+      +rmin(370px)
+        display: inline-block
+        padding: 10px 12px
+        position: relative
+        &:last-child
+          padding-right: 0
+        &:first-child:after
+          content: ''
+          position: absolute
+          right: 0
+          top: 50%
+          width: 1px
+          height: 24px
+          background-color: #d4d4d4
+          margin-top: -12px
+      +rmin($screen-sm)
+        padding: 0
+        display: block
+        text-align: right
+        // padding-left: 16px
+        // padding-right: 16px
+        &:first-child:after
+          display: none
+      +rmin($screen-md)
+        padding-left: 16px
+        padding-right: 16px
+        display: inline-block
+        font-size: 23px
+        &:first-child:after
+          display: block
+      &:hover
+        text-decoration: underline
+  .callback-link
+    +rmin($screen-lg)
+      margin-top: 11px
+  &-right
+    +rmin($screen-sm)
+      text-align: right
+  &-worktime
+    display: inline-block
+    vertical-align: middle
+    font-size: 15px
+    margin-right: 20px
+    opacity: .8
+  &-metros
+    font-size: 13px
+    text-align: left
+    margin-top: 4px
+    +rmin($screen-md)
+      font-size: 14px
+    +rmin($screen-lg)
+      display: inline-block
+  &-top
+    padding-bottom: 18px
+  &-bottom
+    +rmin($screen-sm)
+      .inner-container
+        padding-top: 8px
+    .inner-container
+      +rmin($screen-sm)
+        border-top: 1px solid #e6e6e6
+  .inner-container
+    width: 100%
+    +rmin($screen-sm)
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-grow: 1
+    +rmin($screen-lg)
+      align-items: flex-start
+/* end header */

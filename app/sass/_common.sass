@@ -6,21 +6,21 @@ html
   +rmin($screen-sm)
     min-height: 100%
     position: relative
-  &.asd
-    margin-right: 0
 
 *, *:before, *:after
   box-sizing: inherit
 
 body
   background: #FFF
-  line-height: 1.4
+  line-height: 1.5
   color: black
-  font-size: 14px
-  font-weight: 400
+  font-size: 17px
+  +calibri(400)
 
+h1, h2, h3, h4, h5, h6
+  +georgia(400)
 a
-  color: inherit
+  color: #234b6d
   &:hover
     text-decoration: none
 
@@ -33,3 +33,380 @@ img
 .slick-slide img
   &:focus
     outline: none
+
+.nav-trigger
+  text-decoration: none
+  z-index: 10
+  float: right
+  margin-top: 4px
+  +rmin($screen-sm)
+    display: none
+
+.nav-trigger span
+  +burger(30px, 3px, 5px, black)
+  &.js-active
+    +burger-to-cross()
+
+.mobile-menu
+  background-color: white
+  color: black
+  width: 250px
+  max-height: 100%
+  overflow: auto
+  padding: 14px 10px 10px 20px
+  position: fixed
+  right: 0
+  top: 0
+  min-height: 100%
+  overflow: auto
+  transition: transform 0.3s
+  transform: translateX(105%)
+  text-align: left
+  box-shadow: 0 -10px 10px 0 rgba(black, 0.4)
+  .top
+    margin-bottom: 20px
+    padding-bottom: 14px
+    border-bottom: 1px solid #e6e6e6
+  &.js-active
+    transform: none
+  +rmin($screen-sm)
+    display: none
+
+.mobile-nav
+  a
+    font-weight: 400
+    text-transform: uppercase
+    text-decoration: none
+    display: block
+    padding: 6px 10px
+    font-size: 15px
+    font-weight: 700
+    &:first-child
+      margin-top: 0
+
+.reset-list
+  list-style: none
+  padding: 0
+  margin: 0
+
+svg path
+  +tr()
+
+/* start socials */
+.socials
+  text-align: center
+
+.social-icon
+  display: inline-block
+  vertical-align: middle
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  border: 1px solid #d6d6d6
+  position: relative
+  margin: 10px 4px
+  transition: all 0.3s
+  svg
+    margin: auto
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: absolute
+    width: 30px
+    height: 20px
+    path
+      fill: #7e7e7e
+      transition: all 0.3s
+  &:hover
+    transform: scale(1.1)
+    svg path
+      fill: white
+/* end socials */
+
+.mail-link
+  display: inline-block
+  vertical-align: middle
+  text-decoration: none
+  color: $color-blue
+  vertical-align: middle
+  font-size: 15px
+  svg
+    margin-right: 6px
+    display: inline-block
+    position: relative
+    top: 1px
+  &:hover
+    span
+      text-decoration: underline
+    svg path
+      fill: $color-blue
+
+.delivery-link
+  margin-top: 20px
+  display: block
+  text-align: center
+  text-decoration: none
+  +rmin($screen-sm)
+    margin-top: 0
+  +rmin($screen-md)
+    padding-top: 8px
+  .delivery-car
+    display: inline-block
+    width: 35px
+    height: 24px
+    background: url(../images/car.svg) no-repeat center
+    vertical-align: middle
+    +tr(all 2s)
+  &-animated
+    .delivery-car
+      +rmin($screen-sm)
+        transform: translateX(-100px)
+      +rmin($screen-lg)
+        transform: translateX(-300px)
+    &.js-active
+      .delivery-car
+        transform: none
+  span
+    font-weight: 700
+    color: #383838
+    display: inline-block
+    vertical-align: middle
+    margin-left: 10px
+    border-bottom: 1px solid #8d8d8d
+    line-height: 1
+.out
+  transition: transform 0.3s
+  position: relative
+  +r($screen-sm)
+    padding-top: 0 !important
+  +rmin($screen-sm)
+    padding-top: 180px
+  &.js-active
+    transform: translateX(-250px)
+  &.js-overlay
+    position: relative
+    &:before
+      content ''
+      background-color: rgba(black, 0.4)
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 100
+
+.circle
+  +tr()
+  display: inline-block
+  vertical-align: middle
+  border: 1px solid #7f7f7f
+  width: 32px
+  height: 32px
+  vertical-align: middle
+  position: relative
+  border-radius: 50%
+  svg, .icon
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+.callback-link
+  text-decoration: none
+  color: #383838
+  +tr()
+  .circle
+    border-color: #dedede
+  svg
+    top: -1px
+  span
+    color: #383838
+    display: inline-block
+    vertical-align: middle
+    margin-left: 16px
+  &:hover
+    color: $color-red
+    .circle
+      background-color: $color-red
+      border-color: $color-red
+      svg path
+        fill: white
+
+.metro
+  display: inline-block
+  color: #64a803
+  vertical-align: top
+  position: relative
+  padding-left: 20px
+  margin-right: 10px
+  line-height: 1
+  +rmin($screen-lg)
+    margin-right: 16px
+  &:last-child
+    margin-right: 0
+  svg
+    margin-right: 4px
+    position: absolute
+    left: 0
+    top: 0px
+  span
+    display: block
+  &-yellow
+    color: #ffae00
+    svg path
+      fill: #ffae00
+  &-scheme-link
+    color: $color-red
+    display: inline-block
+    text-decoration: none
+    border-bottom: 1px dotted $color-red
+    line-height: .9
+
+.main-nav
+  a
+    text-decoration: none
+    color: #1d1d1d
+    display: inline-block
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 14px
+    padding-bottom: 10px
+    position: relative
+    line-height: 1
+    +tr()
+    span
+      text-decoration: underline
+    &:hover
+      color: $color-red
+      span
+        text-decoration: none
+    &:after
+      content: ''
+      width: 4px
+      height: 4px
+      position: absolute
+      right: 0
+      top: 50%
+      margin-top: 0
+      background-color: #a9a9a9
+      border-radius: 50%
+    &:first-child
+      padding-left: 0
+    &:last-child
+      &:after
+        display: none
+    +rmin($screen-md)
+      padding-left: 34px
+      padding-right: 34px
+
+.range
+  text-align: center
+  display: inline-block
+  +georgia()
+  &-block
+    text-align: left
+    display: inline-block
+    &:first-child
+      padding-right: 56px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 33px
+        height: 7px
+        right: 9px
+        bottom: 14px
+        background: url(../images/arr-right-long.png) no-repeat center
+    .word
+      color: #191919
+      opacity: .8
+      line-height: 1
+    .price
+      font-size: 36px
+      font-weight: 400
+      line-height: 1
+
+.ruble
+  line-height: 1
+  font-style: normal
+
+.btn
+  width: 260px
+  text-decoration: none
+  height: 62px
+  line-height: 62px
+  background-color: #f15c44
+  display: inline-block
+  text-align: center
+  font-size: 19px
+  position: relative
+  color: white
+  +georgia()
+  +tr(all .8s)
+  &:after
+    content: ''
+    position: absolute
+    border: 1px solid rgba(white, .45)
+    top: 3px
+    left: 3px
+    width: calc(100% - 6px)
+    height: calc(100% - 6px)
+    +tr()
+  .text
+    display: inline-block
+    line-height: 1
+    margin-right: 17px
+  .circle
+    border-color: white
+    line-height: 1
+    margin-top: -3px
+    width: 40px
+    height: 40px
+    .icon-cart
+      top: -1px
+  &:hover
+    background-color: darken(#f15c44, 10%)
+    &:after
+      border-color: white
+
+@keyframes dash
+  to
+    stroke-dashoffset: 0
+
+[data-aos][data-aos][data-aos-delay='3000']
+  transition-delay: 3000ms
+[data-aos][data-aos][data-aos-delay='4000']
+  transition-delay: 4000ms
+[data-aos][data-aos][data-aos-delay='5000']
+  transition-delay: 5000ms
+[data-aos][data-aos][data-aos-delay='6000']
+  transition-delay: 6000ms
+[data-aos][data-aos][data-aos-delay='7000']
+  transition-delay: 7000ms
+[data-aos][data-aos][data-aos-delay='8000']
+  transition-delay: 8000ms
+[data-aos][data-aos][data-aos-delay='9000']
+  transition-delay: 9000ms
+
+.section-heading
+  margin-top: 0
+  text-align: center
+  font-size: 26px
+  position: relative
+  +rmin($screen-sm)
+    font-size: 32px
+
+.colored-red
+  color: $color-red
+
+.swiper-pagination-bullet
+  background-color: #efeeec
+  border: 1px solid #848381
+  opacity: 1
+  &-active
+    opacity: 1
+    background-color: #141414
+    border-color: #141414

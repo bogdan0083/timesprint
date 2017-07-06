@@ -276,3 +276,16 @@
     $sprite-name: nth($sprite, 10)
     .icon-#{$sprite-name}
       @include sprite($sprite)
+
+=calibri($weight: 400)
+  font-family: 'Calibri', 'Calibri Custom', sans-serif
+  font-weight: $weight
+
+=georgia($weight: 400)
+  font-family: Georgia
+  font-weight: $weight
+
+=tr($props: all 0.3s 0s)
+  transition: $props
+
++font('ruble', 'rouble-webfont')

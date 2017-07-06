@@ -1,4 +1,39 @@
 //BEGIN header
-header.site-header
-  p header
+header.header.js-header
+  .header-top
+    .container
+      .inner-container
+        a.logo(href="#")
+          img(src="images/logo.png" alt="Timesprint.ru")
+        a.nav-trigger
+          span
+        .header-address
+          address Москва, ул. Золоторожский Вал, 22
+          .header-metros.hidden-xs
+            .metro.metro-green
+              include ../data/metro.svg
+              span Римская
+            .metro.metro-yellow
+              include ../data/metro.svg
+              span Площадь Ильича
+              a.metro-scheme-link.popup-link(href="#popup-metro") схема
+        a.callback-link.popup-link.hidden-xs(href="#popup-callback") 
+          .circle
+            include ../data/phone.svg
+          span Заказать звонок
+        .header-right
+          .header-phones
+            a.phone(href="tel:+74952150965") +7 (495) 215-09-65
+            a.phone(href="tel:+74952150965") +7 (812) 313-24-95
+          .header-worktime Пн.-Пт.: 10:00 - 19:30
+          a.mail-link(href="mailto:info@timesprint.ru")
+            include ../data/mail.svg
+            span info@timesprint.ru
+  .header-bottom
+    .container
+      .inner-container
+        include _main-nav.pug
+        a.delivery-link.delivery-link-animated(href="#")
+          .delivery-car
+          span Доставка по всей России!
 //END header

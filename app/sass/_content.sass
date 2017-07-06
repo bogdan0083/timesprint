@@ -1,5 +1,485 @@
-.block
-  display: flex
+@keyframes rotateLabel
+  0%
+    transform: rotateX(-90deg)
+  100%
+    transform: rotateX(0)
 
-.block-asd
-  position: statics
+.promo
+  background-color: #ede9e8
+  max-width: 1655px
+  margin: 0 auto
+  padding: 10px 10px 30px
+  +rmin($screen-md)
+    padding-bottom: 80px
+  &-navigation
+    +clr()
+  +rmin($screen-md)
+    padding-left: 50px
+    padding-right: 45px
+    background: #ede9e8 url(../images/newspaper.jpg) no-repeat center / 100% 100%
+  +rmin($screen-lg)
+    padding-left: 70px
+    padding-right: 65px
+  &-top
+    &-link
+      display: block
+      text-decoration: none
+      position: relative
+      margin: 40px 0
+      border-bottom: 1px solid #c2bfbf
+      color: inherit
+      .wrap
+        position: relative
+        padding-top: 22px
+      +rmin($screen-sm)
+        float: left
+        width: 33.3333%
+        border-bottom: 0
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: 10px
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+          .wrap:after
+            display: none
+        &:after
+          content: ''
+          position: absolute
+          height: 5px
+          left: 0
+          bottom: 0
+          width: 100%
+          border-top: 1px solid #777574
+          border-bottom: 1px solid #bdbab9
+          // z-index: 10
+      +rmin($screen-md)
+        padding-left: 40px
+        padding-right: 40px
+      .wrap:before
+        content: ''
+        width: 30px
+        height: 30px
+        position: absolute
+        left: 0
+        top: 0
+        background: url(../images/newspaper.svg) no-repeat center
+      .wrap:after
+        content: ''
+        width: 1px
+        height: 80px
+        position: absolute
+        right: -10px
+        top: 4px
+        background-color: #c0bfbf
+        +rmin($screen-md)
+          right: -40px
+      &:before
+        content: ''
+        position: absolute
+        height: 5px
+        left: 4px
+        bottom: -33px
+        width: 34px
+        height: 38px
+        background-image: url(../images/label.png)
+        transform: rotateX(-90deg)
+        transform-origin: 50% 0
+        display: none
+        animation: rotateLabel 1s 1.4s both
+      h3
+        margin-bottom: 0
+        margin-bottom: -6px
+        +rmin($screen-md)
+          font-size: 24px
+      p
+        margin-top: 0
+        text-decoration: underline
+        color: $color-blue
+        +georgia()
+      img
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        opacity: .6
+        +gray()
+      &.active
+        &:after
+          background-color: #242323
+          border-top: #242323
+          border-bottom: #242323
+        &:before
+          display: block
+        .wrap:before
+          opacity: 1
+        h3
+          font-weight: 700
+        p
+          color: #383838
+          text-decoration: none
+        img
+          filter: none
+          opacity: 1
+  &-middle
+    +clr()
+  &-leftside, &-center, &-rightside
+    +rmin($screen-sm)
+      float: left
+      width: 33.3333%
+  &-leftside
+    padding-top: 20px
+    +rmin($screen-sm)
+      padding-right: 20px
+    h1
+      font-size: 30px
+      max-width: 430px
+      margin-top: 0
+      line-height: 1.2
+      +rmin($screen-sm)
+        font-size: 28px
+      +rmin(1000px)
+        font-size: 30px
+      +rmin($screen-lg)
+        font-size: 38px
+    &-lined
+      padding-bottom: 22px
+      padding-top: 20px
+      border-top: 2px solid #222121
+      border-bottom: 2px solid #222121
+      text-align: center
+      +rmin($screen-md)
+        display: inline-block
+    &-additional
+      padding-top: 10px
+      padding-right: 20px
+      h4
+        font-size: 17px
+    &-list
+      li
+        position: relative
+        padding-left: 50px
+        padding-top: 14px
+        padding-bottom: 14px
+        font-size: 15px
+        +rmin($screen-md)
+          font-size: 17px
+        img
+          position: absolute
+          left: 0
+          top: 50%
+          margin-top: -17px
+          border-radius: 50%
+          overflow: hidden
+    .btn
+      width: 185px
+      vertical-align: top
+      display: block
+      margin: 10px auto 0
+      +rmin($screen-md)
+        margin-left: 30px
+        display: inline-block
+        margin-top: 2px
+    +rmin($screen-sm)
+      border-right: 1px solid #bdbaba
+  &-center
+    position: relative
+    .wrap
+      position: relative
+    .num
+      position: absolute
+      background-color: $color-red
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      left: 0
+      top: 0
+      text-align: center
+      font-size: 15px
+      z-index: 10
+      color: white
+      font-size: 13px
+      &1
+        top: 19%
+        left: 22%
+      &2
+        top: 36%
+        left: 31%
+      &3
+        top: 52%
+        left: 27%
+      &4
+        top: 72%
+        left: 73%
+      &5
+        top: 80%
+        left: 84%
+    .lines
+      position: absolute
+      left: 24%
+      top: 0
+      display: none
+      +rmin($screen-lg)
+        display: block
+  .item-features-list
+    max-width: 340px
+    padding-bottom: 10px
+    +rmin($screen-md)
+      margin-left: 40px
+    +counter(list1, "")
+    li
+      display: table
+      width: 100%
+      margin: 14px 0
+      position: relative
+      &:before
+        position: absolute
+        background-color: #fff
+        width: 26px
+        height: 26px
+        border: 1px solid #b0b0b0
+        border-radius: 50%
+        left: -10px
+        top: 50%
+        margin-top: -16px
+        text-align: center
+        padding-top: 1px
+        font-size: 15px
+        color: $color-red
+    img
+      border-radius: 50%
+      overflow: hidden
+    .ic-wrap
+      width: 69px
+      text-align: center
+    .ic-wrap, .text
+      display: table-cell
+      vertical-align: middle
+    .text
+      padding-left: 20px
+  &-video
+    padding-top: 20px
+    border-top: 1px solid #bdbab9
+    +rmin($screen-md)
+      padding-left: 30px
+  &-bottom
+    text-align: center
+    border-top: 1px solid #a9a4a2
+    padding-top: 14px
+    margin-top: 12px
+    position: relative
+    +rmin($screen-sm)
+      text-align: left
+    +rmin($screen-lg)
+      text-align: center
+    &-link
+      text-decoration: none
+      color: inherit
+      display: block
+      margin: 10px 0
+      +tr()
+      +georgia()
+      .circle
+        width: 40px
+        height: 40px
+        border-color: $color-red
+      span
+        margin-left: 12px
+        text-decoration: underline
+      &:hover
+        .circle
+          background-color: $color-red
+          svg path
+            fill: white
+        span
+          text-decoration: none
+      +rmin($screen-sm)
+        display: inline-block
+        padding: 0 30px
+        position: relative
+        &:first-child:after
+          content: ''
+          width: 1px
+          height: 22px
+          position: absolute
+          right: 0
+          top: 50%
+          margin-top: -11px
+          background-color: #c0bfbf
+  .share-block
+    margin-top: 10px
+    +rmin($screen-md)
+      margin-top: 0
+      position: absolute
+      right: 40px
+      top: 28px
+
+.ruble
+  font-family: 'ruble'
+  font-style: normal
+  margin-left: 5px
+
+/* start share-block */
+.share-block
+  .share-text
+    font-size: 15px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 20px
+    svg
+      position: relative
+      top: -1px
+      display: inline-block
+      margin-right: 6px
+      path
+        fill: $color-red
+  .ya-share2
+    display: inline-block
+    vertical-align: middle
+/* end share-block */
+
+.js-line1
+  stroke-dasharray: 466
+  stroke-dashoffset: 466
+  animation: dash 2s 3.4s both
+.js-line2
+  stroke-dasharray: 426
+  stroke-dashoffset: 426
+  animation: dash 2s 4.4s both
+.js-line3
+  stroke-dasharray: 433
+  stroke-dashoffset: 433
+  animation: dash 2s 5.4s both
+.js-line4
+  stroke-dasharray: 255
+  stroke-dashoffset: 255
+  animation: dash 2s 6.4s both
+.js-line5
+  stroke-dasharray: 153
+  stroke-dashoffset: 153
+  animation: dash 2s 7.4s both
+
+/* start gallery */
+.gallery
+  background-color: #eae8e4
+  padding: 20px 0
+  text-align: center
+  overflow: hidden
+  .container
+    max-width: 1400px
+  .section-heading
+    padding-bottom: 14px
+    &:after
+      content: ''
+      position: absolute
+      width: 1px
+      height: 1px
+      left: 50%
+      bottom: 0
+      background-color: #b1afac
+      transform: translateX(-50%)
+      opacity: 0
+      +tr(all 1s 0.7s)
+    &.aos-animate:after
+      width: 100%
+      opacity: 1
+  h4
+    margin: 0
+    font-size: 19px
+    color: #191919
+  p
+    color: #383838
+    +rmin($screen-sm)
+      margin-top: -4px
+
+.gallery-slider
+  text-align: center
+  padding-bottom: 40px
+  .pic-big, .pic-group
+    display: inline-block
+    vertical-align: top
+    text-align: center
+    margin: 20px 0
+    +rmin($screen-sm)
+      margin: 0
+  .pic-group
+    margin-bottom: 0
+  .pic-big, .pic-mini
+    position: relative
+    &:after
+      content: ''
+      left: 50%
+      height: 100%
+      top: 0
+      width: 94%
+      transform: translateX(-50%)
+      box-shadow: 0 4px 10px 0 rgba(black, 0.4)
+      position: absolute
+    img
+      display: block
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      background: url(../images/frame-big.png) no-repeat center / 100% 100%
+      position: absolute
+      left: 0
+      top: 0
+  .pic-big
+    padding: 23px
+    +rmin($screen-sm)
+      width: 306px
+      padding: 10px
+    +rmin($screen-lg)
+      width: auto
+      padding: 23px
+  .pic-group
+    width: 100%
+    max-width: 400px
+    +rmin($screen-lg)
+      max-width: 500px
+  .pic-mini
+    padding: 15px
+    display: inline-block
+    margin: 0 3px 3px
+    width: 160px
+    +rmin($screen-lg)
+      margin: 0 10px 10px
+      width: auto
+    &:before
+      background-image: url(../images/frame-mini.png)
+/* end gallery */
+
+.lamps
+  height: 70px
+  max-width: 985px
+  margin: 30px auto 6px
+  position: relative
+  z-index: 10
+  display: none
+  +rmin($screen-sm)
+    display: block
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: url(../images/lamp-holder.png) no-repeat center top
+    z-index: 5
+
+.lamp
+  width: 271px
+  height: 122px
+  position: absolute
+  top: -5px
+  left: -128px
+  background-image: url(../images/lamp.png)
+  &-center
+    left: 50%
+    margin-left: -130px
+  &-right
+    left: auto
+    right: -133px

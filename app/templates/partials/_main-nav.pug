@@ -1,0 +1,4 @@
+- menuArr = ['О компании', 'Доставка и оплата', 'Методы оплаты', 'Частые вопросы', 'Контакты']
+.main-nav.hidden-xs
+  for item, idx in menuArr
+    a(href="#" class=activeMenu == idx ? 'active' : ''): span #{item}

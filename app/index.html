@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Main page</title>
+    <title>Главная</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -15,13 +15,415 @@
 
 <body>
     <!--BEGIN out-->
+    <!-- start mobile-menu-->
+    <div class="mobile-menu hidden-md hidden-lg">
+        <div class="top">
+            <a class="callback-link popup-link" href="#popup-callback">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                        <path fill="#383838" d="M12.76 10.7l-1.91-1.9a.98.98 0 0 0-1.39.03l-.96.95-.19-.1c-.6-.34-1.43-.8-2.3-1.67a9.24 9.24 0 0 1-1.67-2.3l-.11-.2.65-.63.31-.32c.4-.4.41-1.02.03-1.4l-1.9-1.9a1 1 0 0 0-1.4.03l-.54.54.02.01a3.04 3.04 0 0 0-.64 1.57c-.25 2.08.7 3.98 3.28 6.56 3.57 3.57 6.44 3.3 6.57 3.29a3.13 3.13 0 0 0 1.57-.64l.01.01.54-.53a1 1 0 0 0 .03-1.4z"
+                        />
+                    </svg>
+                </div><span>Заказать звонок</span>
+            </a>
+        </div>
+        <nav class="mobile-nav">
+            <ul class="reset-list">
+                <li><a class="mobile-nav-item-big" href="#">Жилая недвижимость</a>
+                </li>
+                <li><a class="mobile-nav-item-big" href="#">Коммерческая недвижимость</a>
+                </li>
+                <li><a href="#">О компании</a>
+                </li>
+                <li><a href="#">Доставка и оплата</a>
+                </li>
+                <li><a href="#">Методы оплаты</a>
+                </li>
+                <li><a href="#">Частые вопросы</a>
+                </li>
+                <li><a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div class="out">
         <!--BEGIN header-->
-        <header class="site-header">
-            <p>header</p>
+        <header class="header js-header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="inner-container">
+                        <a class="logo" href="#">
+                            <img src="images/logo.png" alt="Timesprint.ru">
+                        </a><a class="nav-trigger"><span></span></a>
+                        <div class="header-address"><address>Москва, ул. Золоторожский Вал, 22</address>
+                            <div class="header-metros hidden-xs">
+                                <div class="metro metro-green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+                                        <path fill="#6ead13" d="M7.49.86A6.72 6.72 0 0 0 .8 7.62c0 2.03.87 3.35.87 3.35h11.6s.88-1.44.88-3.35A6.72 6.72 0 0 0 7.49.86zm5.3 9.29H2.2s-.56-1.08-.56-2.55a5.9 5.9 0 0 1 5.88-5.93 5.9 5.9 0 0 1 5.87 5.93c0 1.48-.58 2.55-.58 2.55zm-3.42-7.5H9.3L7.5 6.15 5.66 2.63 3.14 9.01h2.21l.71-2 1.45 2.5 1.39-2.5.7 2h2.23z"
+                                        />
+                                    </svg><span>Римская</span>
+                                </div>
+                                <div class="metro metro-yellow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+                                        <path fill="#6ead13" d="M7.49.86A6.72 6.72 0 0 0 .8 7.62c0 2.03.87 3.35.87 3.35h11.6s.88-1.44.88-3.35A6.72 6.72 0 0 0 7.49.86zm5.3 9.29H2.2s-.56-1.08-.56-2.55a5.9 5.9 0 0 1 5.88-5.93 5.9 5.9 0 0 1 5.87 5.93c0 1.48-.58 2.55-.58 2.55zm-3.42-7.5H9.3L7.5 6.15 5.66 2.63 3.14 9.01h2.21l.71-2 1.45 2.5 1.39-2.5.7 2h2.23z"
+                                        />
+                                    </svg><span>Площадь Ильича</span><a class="metro-scheme-link popup-link" href="#popup-metro">схема</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="callback-link popup-link hidden-xs" href="#popup-callback">
+                            <div class="circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                                    <path fill="#383838" d="M12.76 10.7l-1.91-1.9a.98.98 0 0 0-1.39.03l-.96.95-.19-.1c-.6-.34-1.43-.8-2.3-1.67a9.24 9.24 0 0 1-1.67-2.3l-.11-.2.65-.63.31-.32c.4-.4.41-1.02.03-1.4l-1.9-1.9a1 1 0 0 0-1.4.03l-.54.54.02.01a3.04 3.04 0 0 0-.64 1.57c-.25 2.08.7 3.98 3.28 6.56 3.57 3.57 6.44 3.3 6.57 3.29a3.13 3.13 0 0 0 1.57-.64l.01.01.54-.53a1 1 0 0 0 .03-1.4z"
+                                    />
+                                </svg>
+                            </div><span>Заказать звонок</span>
+                        </a>
+                        <div class="header-right">
+                            <div class="header-phones"><a class="phone" href="tel:+74952150965">+7 (495) 215-09-65</a><a class="phone" href="tel:+74952150965">+7 (812) 313-24-95</a>
+                            </div>
+                            <div class="header-worktime">Пн.-Пт.: 10:00 - 19:30</div>
+                            <a class="mail-link" href="mailto:info@timesprint.ru">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10">
+                                    <path fill="#191919" d="M10.47.97H1.48C.68.97.03 1.62.03 2.42v6.1c0 .8.65 1.45 1.45 1.45h8.98c.8 0 1.46-.65 1.46-1.45v-6.1c0-.8-.65-1.45-1.45-1.45zm.79 7.55a.8.8 0 0 1-.79.79H1.48a.8.8 0 0 1-.79-.79v-6.1a.8.8 0 0 1 .79-.78h8.98c.44 0 .79.35.79.78v6.1zM7.53 5.4l2.9-2.6a.33.33 0 1 0-.44-.49L5.98 5.9l-.78-.7h-.01l-.05-.05-3.19-2.83c-.13-.12-.34-.11-.47.03a.33.33 0 0 0 .03.46l2.94 2.62-2.93 2.73a.33.33 0 0 0-.01.46c.07.07.15.1.24.1.08 0 .16-.02.23-.08l2.97-2.77.81.72c.06.06.14.08.22.08.08 0 .16-.03.22-.08l.83-.74 2.96 2.8c.06.05.15.08.23.08.09 0 .17-.03.24-.1a.34.34 0 0 0-.01-.47z"
+                                    />
+                                </svg><span>info@timesprint.ru</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="inner-container">
+                        <div class="main-nav hidden-xs"><a href="#"><span>О компании</span></a><a href="#"><span>Доставка и оплата</span></a><a href="#"><span>Методы оплаты</span></a><a href="#"><span>Частые вопросы</span></a><a href="#"><span>Контакты</span></a>
+                        </div>
+                        <a class="delivery-link delivery-link-animated" href="#">
+                            <div class="delivery-car"></div><span>Доставка по всей России!</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
         <!--END header-->
-        <h1>Index page</h1>
+        <!-- start promo-->
+        <section class="promo">
+            <div class="promo-inner">
+                <!-- start promo-top-->
+                <div class="promo-top">
+                    <nav class="promo-navigation">
+                        <a class="promo-top-link active" href="#" data-aos="fade-up" data-aos-anchor=".promo">
+                            <div class="wrap">
+                                <h3>Газета в подарок</h3>
+                                <p>на день рождения</p>
+                                <img src="images/pravda-small.jpg" alt="Газета в подарок">
+                            </div>
+                        </a>
+                        <a class="promo-top-link" href="#" data-aos="fade-up" data-aos-anchor=".promo">
+                            <div class="wrap">
+                                <h3>Книга «Правда»</h3>
+                                <p>на день рождения</p>
+                                <img src="images/pravda-small.jpg" alt="Газета в подарок">
+                            </div>
+                        </a>
+                        <a class="promo-top-link" href="#" data-aos="fade-up" data-aos-anchor=".promo">
+                            <div class="wrap">
+                                <h3>Газета в подарок</h3>
+                                <p>на юбилей свадьбы</p>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+                <!-- end promo-top-->
+                <!-- start promo-middle-->
+                <div class="promo-middle">
+                    <div class="promo-leftside" data-aos="fade-left" data-aos-delay="1000" data-aos-anchor=".promo">
+                        <h1>Газета «Правда» — оригинальный подарок <br>на День рождения!</h1>
+                        <div class="promo-leftside-lined">
+                            <div class="range">
+                                <div class="range-block"><span class="word">от</span>
+                                    <div class="price"> <span>1390</span>
+                                    </div>
+                                </div>
+                                <div class="range-block"><span class="word">до</span>
+                                    <div class="price"> <span>2390</span><i class="ruble">e</i>
+                                    </div>
+                                </div>
+                            </div><a class="btn btn-orange btn-icon" href="#"><span class="text">Заказать</span><div class="circle"><i class="icon icon-cart"></i></div></a>
+                        </div>
+                        <div class="promo-leftside-additional">
+                            <h4>Подарок включает полный комплект:</h4>
+                            <ul class="reset-list promo-leftside-list">
+                                <li>
+                                    <img src="images/add-feature1.png" alt="Рамка"><span class="text">Газету со статьей об имениннике и его фото</span>
+                                </li>
+                                <li>
+                                    <img src="images/add-feature2.png" alt="Газета"><span class="text">Багетную рамку (или тубус). <a href="#">Выбор рамок</a></span>
+                                </li>
+                                <li>
+                                    <img src="images/add-feature1.png" alt="Газета"><span class="text">Подарочную коробку и фирменный пакет</span>
+                                </li>
+                                <li>
+                                    <img src="images/add-feature2.png" alt="Газета"><span class="text">Набор крепежей на стену</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="promo-center" data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".promo">
+                        <div class="wrap">
+                            <img class="pravda-newspaper-pic" src="images/pravda-large.png" alt="Газета Правда">
+                            <div class="num num1" data-aos="fade-down" data-aos-delay="3000" data-aos-duration="300" data-aos-anchor=".promo">1</div>
+                            <div class="num num2" data-aos="fade-down" data-aos-delay="4000" data-aos-duration="300" data-aos-anchor=".promo">2</div>
+                            <div class="num num3" data-aos="fade-down" data-aos-delay="5000" data-aos-duration="300" data-aos-anchor=".promo">3</div>
+                            <div class="num num4" data-aos="fade-down" data-aos-delay="6000" data-aos-duration="300" data-aos-anchor=".promo">4</div>
+                            <div class="num num5" data-aos="fade-down" data-aos-delay="7000" data-aos-duration="300" data-aos-anchor=".promo">5</div>
+                            <div class="lines">
+                                <svg x="0px" y="0px" width="425" height="482" viewBox="0 0 425 482" class="js-lines">
+                                    <path class="js-line js-line1" style="fill:none;stroke:#CF4329;stroke-miterlimit:10;" d="M0.412,115.217c0.127-0.185,138.907-200.815,424.498-71" />
+                                    <path class="js-line js-line2" style="fill:none;stroke:#CF4329;stroke-miterlimit:10;" d="M44.412,220.217c0,0,107.996-196.902,380.498-82.902" />
+                                    <path class="js-line js-line3" style="fill:none;stroke:#CF4329;stroke-miterlimit:10;" d="M21.412,309.217c0.175-0.182,167.27-167.6,403.498-89.598" />
+                                    <path class="js-line js-line4" style="fill:none;stroke:#CF4329;stroke-miterlimit:10;" d="M257.013,425.918c0,0,33.395-134.195,167.896-118.195" />
+                                    <path class="js-line js-line5" style="fill:none;stroke:#CF4329;stroke-miterlimit:10;" d="M316.411,462.217c0,0,10.1000-86,117.538-68" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-rightside" data-aos="fade-right" data-aos-delay="3000" data-aos-anchor=".promo">
+                        <ul class="reset-list item-features-list">
+                            <li>
+                                <div class="ic-wrap">
+                                    <img src="images/pravda-pic1.jpg" alt="Газета Правда">
+                                </div>
+                                <div class="text">Архивный номер датированный днем рождения именинника</div>
+                            </li>
+                            <li>
+                                <div class="ic-wrap">
+                                    <img src="images/pravda-pic2.jpg" alt="Газета Правда">
+                                </div>
+                                <div class="text">Фото именинника</div>
+                            </li>
+                            <li>
+                                <div class="ic-wrap">
+                                    <img src="images/pravda-pic3.jpg" alt="Газета Правда">
+                                </div>
+                                <div class="text">Статья о рождении именинника</div>
+                            </li>
+                            <li>
+                                <div class="ic-wrap">
+                                    <img src="images/pravda-pic4.jpg" alt="Газета Правда">
+                                </div>
+                                <div class="text">Реальные статьи из прошлого <a href="#">Выбрать статью</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ic-wrap">
+                                    <img src="images/pravda-pic5.jpg" alt="Газета Правда">
+                                </div>
+                                <div class="text">Багетная рамка на <a href="#">Ваш выбор</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="promo-video" data-aos="zoom-out" data-aos-delay="8000" data-aos-anchor=".promo">
+                            <a class="promo-video-link popup-link" href="#popup-video">
+                                <img src="images/video.jpg" alt="Видео">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end promo-middle-->
+                <!-- start promo-bottom-->
+                <div class="promo-bottom" data-aos="fade-in" data-aos-delay="9000" data-aos-anchor=".promo">
+                    <div class="promo-bottom-links">
+                        <a class="promo-bottom-link" href="#">
+                            <div class="circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                                    <path fill="#f15c44" d="M19 16.93H1.01v-3.95l5.24-5.05 5.16 5.16c.21.26.6.22.86.02l2.28-2.07 4.38 4.51.05.04zM1.01 1.9h17.97v12.2l-3.93-4.04a.62.62 0 0 0-.82-.05l-2.35 2.05-5.17-5.07a.62.62 0 0 0-.91-.05L1 11.56zm.23-.92C.56.98 0 1.54 0 2.23v14.52c0 .68.56 1.24 1.25 1.24h17.47c.69 0 1.25-.56 1.25-1.24V2.23c0-.69-.56-1.25-1.25-1.25zm11.7 4.96a1.04 1.04 0 1 0 2.08 0 1.04 1.04 0 0 0-2.08 0z"
+                                    />
+                                </svg>
+                            </div><span>100% гарантия достоверности</span>
+                        </a>
+                        <a class="promo-bottom-link" href="#">
+                            <div class="circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                                    <path fill="#f15c44" d="M19 16.93H1.01v-3.95l5.24-5.05 5.16 5.16c.21.26.6.22.86.02l2.28-2.07 4.38 4.51.05.04zM1.01 1.9h17.97v12.2l-3.93-4.04a.62.62 0 0 0-.82-.05l-2.35 2.05-5.17-5.07a.62.62 0 0 0-.91-.05L1 11.56zm.23-.92C.56.98 0 1.54 0 2.23v14.52c0 .68.56 1.24 1.25 1.24h17.47c.69 0 1.25-.56 1.25-1.24V2.23c0-.69-.56-1.25-1.25-1.25zm11.7 4.96a1.04 1.04 0 1 0 2.08 0 1.04 1.04 0 0 0-2.08 0z"
+                                    />
+                                </svg>
+                            </div><span>Передача о нас на радио ”Эхо Москвы”</span>
+                        </a>
+                    </div>
+                    <div class="share-block">
+                        <div class="share-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10">
+                                <path fill="#191919" d="M10.47.97H1.48C.68.97.03 1.62.03 2.42v6.1c0 .8.65 1.45 1.45 1.45h8.98c.8 0 1.46-.65 1.46-1.45v-6.1c0-.8-.65-1.45-1.45-1.45zm.79 7.55a.8.8 0 0 1-.79.79H1.48a.8.8 0 0 1-.79-.79v-6.1a.8.8 0 0 1 .79-.78h8.98c.44 0 .79.35.79.78v6.1zM7.53 5.4l2.9-2.6a.33.33 0 1 0-.44-.49L5.98 5.9l-.78-.7h-.01l-.05-.05-3.19-2.83c-.13-.12-.34-.11-.47.03a.33.33 0 0 0 .03.46l2.94 2.62-2.93 2.73a.33.33 0 0 0-.01.46c.07.07.15.1.24.1.08 0 .16-.02.23-.08l2.97-2.77.81.72c.06.06.14.08.22.08.08 0 .16-.03.22-.08l.83-.74 2.96 2.8c.06.05.15.08.23.08.09 0 .17-.03.24-.1a.34.34 0 0 0-.01-.47z"
+                                />
+                            </svg><span class="text">Поделиться</span>
+                        </div>
+                        <div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,facebook"></div>
+                    </div>
+                </div>
+                <!-- end promo-bottom-->
+            </div>
+        </section>
+        <!-- end promo-->
+        <!-- start gallery-->
+        <section class="gallery">
+            <div class="container">
+                <h2 class="section-heading colored-red" data-aos="fade-down" data-aos-anchor=".gallery">Примеры наших работ</h2>
+                <h4 data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="1000">Вам не нужно писать статью самим. Все уже готово! </h4>
+                <p data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="1800">В форме заказа вы можете выбрать шаблон статьи для газеты ко дню рождения или не добавлять свою статью</p>
+                <div class="lamps" data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="2600">
+                    <div class="lamp"></div>
+                    <div class="lamp lamp-center"></div>
+                    <div class="lamp lamp-right"></div>
+                </div>
+                <div class="gallery-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- start slide-->
+                        <div class="swiper-slide">
+                            <div class="pic-big" data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="0">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                            <div class="pic-group">
+                                <div class="pic-mini" data-aos="fade-down" data-aos-anchor=".gallery-slider" data-aos-delay="800">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini" data-aos="fade-down" data-aos-anchor=".gallery-slider" data-aos-delay="1200">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                                <div class="pic-mini" data-aos="fade-up" data-aos-anchor=".gallery-slider" data-aos-delay="1600">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini" data-aos="fade-up" data-aos-anchor=".gallery-slider" data-aos-delay="2000">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                            </div>
+                            <div class="pic-big" data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="400">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                        </div>
+                        <!-- end slide-->
+                        <!-- start slide-->
+                        <div class="swiper-slide">
+                            <div class="pic-big">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                            <div class="pic-group">
+                                <div class="pic-mini">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                            </div>
+                            <div class="pic-big">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                        </div>
+                        <!-- end slide-->
+                        <!-- start slide-->
+                        <div class="swiper-slide">
+                            <div class="pic-big">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                            <div class="pic-group">
+                                <div class="pic-mini">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                            </div>
+                            <div class="pic-big">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                        </div>
+                        <!-- end slide-->
+                        <!-- start slide-->
+                        <div class="swiper-slide">
+                            <div class="pic-big">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                            <div class="pic-group">
+                                <div class="pic-mini">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery2.jpg">
+                                </div>
+                                <div class="pic-mini">
+                                    <img src="images/gallery3.jpg">
+                                </div>
+                            </div>
+                            <div class="pic-big">
+                                <img src="images/gallery1.jpg">
+                            </div>
+                        </div>
+                        <!-- end slide-->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end gallery-->
+        <!-- start reviews-->
+        <section class="reviews">
+            <div class="reviews-top">
+                <h2 class="section-heading"></h2>
+                <a class="leave-review-link" href="#">
+                    <div class="circle">
+                        <?xml version="1.0" encoding="iso-8859-1" ?>
+                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28.8 29.001" style="enable-background:new 0 0 28.8 29.001;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <defs>
+                                        <rect id="SVGID_1_" y="0.001" width="28.8" height="29" />
+                                    </defs>
+                                    <clipPath id="SVGID_2_">
+                                        <use xlink:href="#SVGID_1_" style="overflow:visible;" />
+                                    </clipPath>
+                                    <path style="clip-path:url(#SVGID_2_);" d="M0,28.478c0,0,9.277-29.657,28.59-28.441c0,0-2.395,3.879-8.441,5.133
+			c0,0,2.816,0.343,5.098-0.418c0,0-1.371,4.414-8.82,5.019c0,0,4.105,1.067,5.93,0.457c0,0-0.496,3.289-8.083,4.922
+			c-0.449,0.098-3.476,0.856-1.043,1.16c0,0,3.497,0.609,4.411,0.305c0,0-2.996,4.484-10.344,4.105c-0.723-0.039-1.063,0-1.063,0
+			L0,28.478z M0,28.478" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div><span class="text">Оставить отзыв</span>
+                </a>
+                <div class="reviews-slider swiper-container">
+                    <a class="arr arr-left" href="#" role="button"></a>
+                    <a class="arr arr-right" href="#" role="button"></a>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="reviews-item">
+                                <div class="date"><span class="icon-calendar"></span><span>26.04.2017</span>
+                                </div>
+                                <h4 class="reviews-item-name">Светлана</h4>
+                                <p>Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы...</p>
+                            </div>
+                        </div>
+                    </div><a class="all-reviews-link">Все отзывы</a>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end reviews-->
         <!--BEGIN footer-->
         <footer class="site-footer">
             <p>Hello from</p>
@@ -30,15 +432,17 @@
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->
+    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="https://yastatic.net/share2/share.js"></script>
     <!-- build:js scripts/libs/jquery.min.js-->
     <script type="text/javascript" src="scripts/libs/jquery.min.js"></script>
     <!-- endbuild-->
     <!-- build:js scripts/libs/libs.js-->
     <script type="text/javascript" src="scripts/libs/aos.js"></script>
-    <script type="text/javascript" src="scripts/libs/jquery.waypoints.js"></script>
+    <!-- script(type="text/javascript" src="scripts/libs/jquery.waypoints.js")-->
     <script type="text/javascript" src="scripts/libs/parallax.min.js"></script>
     <script type="text/javascript" src="scripts/libs/imagesloaded.js"></script>
-    <script type="text/javascript" src="scripts/libs/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/libs/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="scripts/libs/jquery.magnific-popup.min.js"></script>
     <!-- endbuild-->
     <!-- build:js scripts/main.js-->

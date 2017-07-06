@@ -1,0 +1,15 @@
+- var menuArr = ['О компании', 'Доставка и оплата', 'Методы оплаты', 'Частые вопросы', 'Контакты']
+
+// start mobile-menu
+.mobile-menu.hidden-md.hidden-lg
+  .top
+    a.callback-link.popup-link(href="#popup-callback") 
+      .circle
+        include ../data/phone.svg
+      span Заказать звонок
+  nav.mobile-nav
+    ul.reset-list
+      li: a.mobile-nav-item-big(href="#") Жилая недвижимость
+      li: a.mobile-nav-item-big(href="#") Коммерческая недвижимость
+      for link, idx in menuArr
+        li: a(href="#") #{link}
