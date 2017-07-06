@@ -42,6 +42,26 @@ $(document).ready(function () {
   });
 
   $('.gallery-slider').swiper({
-    pagination: '.gallery-slider .swiper-pagination'
+    pagination: '.gallery-slider .swiper-pagination',
+    speed: 1000
+  });
+
+  $('.reviews-slider').swiper({
+    pagination: '.reviews-slider .swiper-pagination',
+    slidesPerView: 3,
+    nextButton: '.reviews .arr-right',
+    prevButton: '.reviews .arr-left',
+    speed: 1000,
+    breakpoints: {
+      600: {
+        slidesPerView: 1
+      },
+      900: {
+        slidesPerView: 2
+      },
+      1100: {
+        slidesPerView: 2
+      }
+    }
   });
 });

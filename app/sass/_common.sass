@@ -92,6 +92,8 @@ img
 svg path
   +tr()
 
+.icon
+  display: inline-block
 /* start socials */
 .socials
   text-align: center
@@ -175,9 +177,11 @@ svg path
     margin-left: 10px
     border-bottom: 1px solid #8d8d8d
     line-height: 1
+
 .out
   transition: transform 0.3s
   position: relative
+  overflow: hidden
   +r($screen-sm)
     padding-top: 0 !important
   +rmin($screen-sm)
@@ -396,17 +400,37 @@ svg path
   text-align: center
   font-size: 26px
   position: relative
+  &-large
+    font-size: 28px
   +rmin($screen-sm)
     font-size: 32px
+    &-large
+      font-size: 38px
 
 .colored-red
   color: $color-red
 
 .swiper-pagination-bullet
-  background-color: #efeeec
+  background-color: transparent
   border: 1px solid #848381
-  opacity: 1
+  opacity: transparent
   &-active
     opacity: 1
     background-color: #141414
     border-color: #141414
+
+[data-aos="fade-right-big"]
+  transform: translateX(-100%)
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate
+    transform: translateX(0)
+    opacity: 1
+
+[data-aos="fade-left-big"]
+  transform: translateX(100%)
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate
+    transform: translateX(0)
+    opacity: 1
