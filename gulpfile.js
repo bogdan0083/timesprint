@@ -147,13 +147,13 @@ gulp.task('html', ['styles', 'scripts'], () => {
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
-  .pipe($.imagemin(
-    [$.imagemin.gifsicle(),
-    mozjpeg({ quality: 100 }),
-    $.imagemin.optipng(),
-    $.imagemin.svgo()],
-    { verbose: true }
-  ))
+  // .pipe($.imagemin(
+  //   [$.imagemin.gifsicle(),
+  //   mozjpeg({ quality: 100 }),
+  //   $.imagemin.optipng(),
+  //   $.imagemin.svgo()],
+  //   { verbose: true }
+  // ))
   .pipe(gulp.dest('dist/images'));
 });
 

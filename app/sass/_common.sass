@@ -63,6 +63,7 @@ img
   transform: translateX(105%)
   text-align: left
   box-shadow: 0 -10px 10px 0 rgba(black, 0.4)
+  z-index: 200
   .top
     margin-bottom: 20px
     padding-bottom: 14px
@@ -93,7 +94,19 @@ svg path
   +tr()
 
 .icon
+  position: relative
   display: inline-block
+  &:before, &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    +tr()
+  &:after
+    opacity: 0
+
+.icon-cart:after
+  +sprite($cart-red)
 /* start socials */
 .socials
   text-align: center
@@ -145,7 +158,7 @@ svg path
       fill: $color-blue
 
 .delivery-link
-  margin-top: 20px
+  margin-top: 0
   display: block
   text-align: center
   text-decoration: none
@@ -162,7 +175,7 @@ svg path
     +tr(all 2s)
   &-animated
     .delivery-car
-      +rmin($screen-sm)
+      +rmin($screen-md)
         transform: translateX(-100px)
       +rmin($screen-lg)
         transform: translateX(-300px)
@@ -184,8 +197,6 @@ svg path
   overflow: hidden
   +r($screen-sm)
     padding-top: 0 !important
-  +rmin($screen-sm)
-    padding-top: 180px
   &.js-active
     transform: translateX(-250px)
   &.js-overlay
@@ -332,6 +343,11 @@ svg path
       font-size: 36px
       font-weight: 400
       line-height: 1
+  &-single
+    .range-block
+      padding-right: 0
+      &:first-child:after
+        display: none
 
 .ruble
   line-height: 1
@@ -349,7 +365,7 @@ svg path
   position: relative
   color: white
   +georgia()
-  +tr(all .8s)
+  +tr(all .3s)
   &:after
     content: ''
     position: absolute
@@ -370,11 +386,37 @@ svg path
     width: 40px
     height: 40px
     .icon-cart
-      top: -1px
+      top: -2px
   &:hover
-    background-color: darken(#f15c44, 10%)
+    background-color: white
+    color: $color-red
+    .circle
+      border-color: $color-red
+      .icon:before
+        opacity: 0
+      .icon:after
+        opacity: 1
     &:after
-      border-color: white
+      border-color: $color-red
+  &-large
+    max-width: 345px
+    width: 100%
+    line-height: 70px
+    height: 74px
+  &-gray
+    background-color: #f3f2f0
+    border: 1px solid #262626
+    color: #234b6d
+    &:after
+      border-color: #737373
+    &:hover
+      background-color: $color-red
+      border-color: $color-red
+      color: white
+      &:after
+        border-color: white
+  &-yellow
+    background-color: #ffa200
 
 @keyframes dash
   to
@@ -413,7 +455,7 @@ svg path
 .swiper-pagination-bullet
   background-color: transparent
   border: 1px solid #848381
-  opacity: transparent
+  opacity: 1
   &-active
     opacity: 1
     background-color: #141414

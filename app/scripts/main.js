@@ -7,14 +7,13 @@ $(document).ready(function () {
   var $header = $('.js-header');
   var headerHeight = $header.outerHeight();
 
-  // Бургер меню на мобильном
 
   // Animate On Scroll (AOS.JS)
   AOS.init({
-    once: true,
     duration: 900
   });
 
+  // Бургер меню на мобильном
   $navTrigger.on('click', function(e) {
     e.preventDefault();
     $navTrigger.find('span').toggleClass('js-active');
@@ -26,19 +25,16 @@ $(document).ready(function () {
     $(this).addClass('js-active');
   });
 
-  function addPadding(headerHeight, $wrapper) {
-    $wrapper.css('padding-top', headerHeight)
-  }
-
-  // Добавляем паддинг для контента
-  addPadding(headerHeight, $outWrapper);
+  // function addPadding(headerHeight, $wrapper) {
+  //   $wrapper.css('padding-top', headerHeight)
+  // }
+  //
+  // // Добавляем паддинг для контента
+  // addPadding(headerHeight, $outWrapper);
 
   $(window).on('resize', function () {
-    var headerHeight = $('.js-header').outerHeight();
-    addPadding(headerHeight, $outWrapper);
-  });
-  $('.js-line').each(function (idx, path) {
-    console.log(path.getTotalLength());
+    // var headerHeight = $('.js-header').outerHeight();
+    // addPadding(headerHeight, $outWrapper);
   });
 
   $('.gallery-slider').swiper({
@@ -64,4 +60,23 @@ $(document).ready(function () {
       }
     }
   });
+
+  // Окрашиваем в белый цвет прозрачный футер
+
+  if ($(window).width() > 900) {
+    var hdrIsFixed = false;
+    $(window).on('scroll', function (e) {
+      if ($(window).scrollTop() < 240 && hdrIsFixed) {
+        $header.removeClass('header-fixed');
+        hdrIsFixed = false;
+      } else if ($(window).scrollTop() > 240 && !hdrIsFixed){
+        $header.addClass('header-fixed');
+        hdrIsFixed = true;
+      }
+    });
+  }
+
+  // magnificPopup
+  $('.popup-link').magnificPopup({type: 'inline', showCloseBtn: false, removalDelay: 300, mainClass: 'mfp-move-horizontal'});
+
 });

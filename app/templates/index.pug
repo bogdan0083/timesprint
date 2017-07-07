@@ -61,36 +61,36 @@ block content
         .promo-center(data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".promo")
           .wrap
             img.pravda-newspaper-pic(src="images/pravda-large.png" alt="Газета Правда")
-            .num.num1(data-aos="fade-down" data-aos-delay="3000" data-aos-duration="300" data-aos-anchor=".promo") 1
-            .num.num2(data-aos="fade-down" data-aos-delay="4000" data-aos-duration="300" data-aos-anchor=".promo") 2
-            .num.num3(data-aos="fade-down" data-aos-delay="5000" data-aos-duration="300" data-aos-anchor=".promo") 3
-            .num.num4(data-aos="fade-down" data-aos-delay="6000" data-aos-duration="300" data-aos-anchor=".promo") 4
-            .num.num5(data-aos="fade-down" data-aos-delay="7000" data-aos-duration="300" data-aos-anchor=".promo") 5
+            .num.num1(data-aos="zoom-out" data-aos-delay="3000" data-aos-duration="300" data-aos-anchor=".promo") 1
+            .num.num2(data-aos="zoom-out" data-aos-delay="4000" data-aos-duration="300" data-aos-anchor=".promo") 2
+            .num.num3(data-aos="zoom-out" data-aos-delay="5000" data-aos-duration="300" data-aos-anchor=".promo") 3
+            .num.num4(data-aos="zoom-out" data-aos-delay="6000" data-aos-duration="300" data-aos-anchor=".promo") 4
+            .num.num5(data-aos="zoom-out" data-aos-delay="7000" data-aos-duration="300" data-aos-anchor=".promo") 5
             .lines
               include data/lines.svg
-        .promo-rightside(data-aos="fade-right" data-aos-delay="3000" data-aos-anchor=".promo")
+        .promo-rightside(data-aos="fade-in" data-aos-delay="3000" data-aos-anchor=".promo")
           ul.reset-list.item-features-list
-            li 
+            li(data-aos="fade-left" data-aos-delay="3000" data-aos-anchor=".promo" data-aos-duration="2000")
               .ic-wrap
                 img(src="images/pravda-pic1.jpg" alt="Газета Правда")
               .text Архивный номер датированный днем рождения именинника 
-            li 
+            li(data-aos="fade-left" data-aos-delay="4000" data-aos-anchor=".promo" data-aos-duration="2000") 
               .ic-wrap
                 img(src="images/pravda-pic2.jpg" alt="Газета Правда")
               .text Фото именинника 
-            li 
+            li(data-aos="fade-left" data-aos-delay="5000" data-aos-anchor=".promo" data-aos-duration="2000") 
               .ic-wrap
                 img(src="images/pravda-pic3.jpg" alt="Газета Правда")
               .text Статья о рождении именинника 
-            li 
+            li(data-aos="fade-left" data-aos-delay="6000" data-aos-anchor=".promo" data-aos-duration="2000") 
               .ic-wrap
                 img(src="images/pravda-pic4.jpg" alt="Газета Правда")
               .text Реальные статьи из прошлого #[a(href="#") Выбрать статью]
-            li 
+            li(data-aos="fade-left" data-aos-delay="7000" data-aos-anchor=".promo" data-aos-duration="2000") 
               .ic-wrap
                 img(src="images/pravda-pic5.jpg" alt="Газета Правда")
               .text Багетная рамка на #[a(href="#") Ваш выбор]
-          .promo-video(data-aos="zoom-out" data-aos-delay="8000" data-aos-anchor=".promo")
+          .promo-video(data-aos="fade-up" data-aos-delay="8000" data-aos-anchor=".promo")
             a.promo-video-link.popup-link(href="#popup-video")
               img(src="images/video.jpg" alt="Видео")
       // end promo-middle
@@ -129,15 +129,15 @@ block content
             .pic-big(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="0")
               img(src="images/gallery1.jpg")
             .pic-group
-              .pic-mini(data-aos="fade-down" data-aos-anchor=".gallery-slider" data-aos-delay="800")
+              .pic-mini(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="0")
                 img(src="images/gallery2.jpg")
-              .pic-mini(data-aos="fade-down" data-aos-anchor=".gallery-slider" data-aos-delay="1200")
+              .pic-mini(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="")
                 img(src="images/gallery3.jpg")
-              .pic-mini(data-aos="fade-up" data-aos-anchor=".gallery-slider" data-aos-delay="1600")
+              .pic-mini(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="")
                 img(src="images/gallery2.jpg")
-              .pic-mini(data-aos="fade-up" data-aos-anchor=".gallery-slider" data-aos-delay="2000")
+              .pic-mini(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="")
                 img(src="images/gallery3.jpg")
-            .pic-big(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="400")
+            .pic-big(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="")
               img(src="images/gallery1.jpg")
           // end slide
           // start slide
@@ -456,7 +456,7 @@ block content
               p Все страницы газеты в распечатанном виде на уменьшенном формате - A3
               a(href="#") Подробнее
             .price-cell
-              a.additional-photo-link.popup-link(href="#") 
+              a.additional-photo-link.popup-link(href="#popup-additional-item1") 
                 .circle
                   include data/photo.svg
                 span.price 490 Р
@@ -514,10 +514,11 @@ block content
   // end additional-items
   // start any-questions
   section.any-questions 
-    h2.section-heading У вас остались вопросы?
-    p У нас более 3 600 довольных клиентов
-    a.btn.btn-gray
-      span.text Ответы на частые вопросы
+    .container
+      h2.section-heading У вас остались вопросы?
+      p У нас более 3 600 довольных клиентов
+      a.btn.btn-gray.btn-large(href="#")
+        span.text Ответы на частые вопросы
   // end any-questions
   // start seo-desc
   .seo-desc 
@@ -543,35 +544,41 @@ block content
             p Подарок в Москве, Санкт-Петербурге, России стоит от 1390 до 2390 руб. в зависимости от выбранной рамки. Срок изготовления 1-2 дня. #[br] Возможно срочное изготовление день в день за 300 руб. Срочные заказы на текущий день принимаются до 16.00.
   // end seo-desc
   // start warning
-  .warning 
-    h3 Внимание, остерегайтесь подделок!
-    p В интернете появились сайты, предлагающие подобный подарок. Эти сайты делают подарок, используя подложные номера газет «Правда» или иных газет, не соответствующих их реальной дате выпуска. Помните, только компания Timesprint имеет доступ к архиву  и обладает исключительными авторскими правами на изготовление подарков с использованием газет «Правда». Оригинал сертификата можно посмотреть у нас в офисе или на странице О нас.
-    a.btn
-      span.text Подробнее
+  .container
+    .warning(data-aos="fade-up" data-aos-duration="2000") 
+      .inner
+        h3 Внимание, остерегайтесь подделок!
+        p В интернете появились сайты, предлагающие подобный подарок. Эти сайты делают подарок, используя подложные номера газет «Правда» или иных газет, не соответствующих их реальной дате выпуска. Помните, только компания Timesprint имеет доступ к архиву  и обладает исключительными авторскими правами на изготовление подарков с использованием газет «Правда». Оригинал сертификата можно посмотреть у нас в офисе или на странице О нас.
+        a.btn(href="#")
+          span.text Подробнее
   // end warning
   // start other-items
   .other-items
-    h2.section-heading
-    .other-items-block
-      .img
-        img(src="images/pravda-book.png" alt="Книга «Правда»")
-      h4 Книга «Правда»
-      p Эксклюзивный подарок начальнику, коллеге, родным на день рождения и юбилей
-      .price от 6 990 Р
-      a.btn.btn-icon(href="")
-        span.text Заказать
-        .circle
-          i.icon.icon-cart
-      a(href="#").link Подробнее
-    .other-items-block
-      .img
-        img(src="images/pravda-book.png" alt="Газета «Правда»")
-      h4 Газета «Правда»
-      p Эксклюзивный подарок начальнику, коллеге, родным на день рождения и юбилей
-      .price от 1 390 Р
-      a.btn.btn-icon(href="")
-        span.text Заказать
-        .circle
-          i.icon.icon-cart
-      a(href="#").link Подробнее
+    .container
+      h2.section-heading Наши другие оригинальные подарки
+      .row
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .other-items-block
+            .img
+              img(src="images/pravda-book.png" alt="Книга «Правда»")
+            h4 Книга «Правда»
+            p Эксклюзивный подарок начальнику, коллеге, #[br] родным на день рождения и юбилей
+            .price от 6 990 Р
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+            a(href="#").link Подробнее
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .other-items-block
+            .img
+              img(src="images/showcase-item1.png" alt="Газета «Правда»")
+            h4 Газета «Правда»
+            p Эксклюзивный подарок начальнику,  коллеге, #[br] родным на день рождения и юбилей
+            .price от 1 390 Р
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+            a(href="#").link Подробнее
   // end other-items

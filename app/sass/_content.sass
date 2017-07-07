@@ -122,6 +122,9 @@
         img
           filter: none
           opacity: 1
+        &:nth-child(2)
+          &:before
+            background-image: url(../images/label-yellow.png)
   &-middle
     +clr()
   &-leftside, &-center, &-rightside
@@ -130,8 +133,10 @@
       width: 33.3333%
   &-leftside
     padding-top: 20px
+    margin-bottom: 30px
     +rmin($screen-sm)
       padding-right: 20px
+      margin-bottom: 0
     h1
       font-size: 30px
       max-width: 430px
@@ -149,8 +154,11 @@
       border-top: 2px solid #222121
       border-bottom: 2px solid #222121
       text-align: center
-      +rmin($screen-md)
+      +rmin($screen-lg)
         display: inline-block
+        max-width: 460px
+        width: 100%
+        text-align: left
     &-additional
       padding-top: 10px
       padding-right: 20px
@@ -177,8 +185,8 @@
       vertical-align: top
       display: block
       margin: 10px auto 0
-      +rmin($screen-md)
-        margin-left: 30px
+      +rmin($screen-lg)
+        margin-left: 40px
         display: inline-block
         margin-top: 2px
     +rmin($screen-sm)
@@ -187,6 +195,10 @@
     position: relative
     .wrap
       position: relative
+      display: inline-block
+      margin-left: -30px
+      +rmin($screen-lg)
+        margin-left: 0
     .num
       position: absolute
       background-color: $color-red
@@ -261,8 +273,23 @@
   &-video
     padding-top: 20px
     border-top: 1px solid #bdbab9
-    +rmin($screen-md)
+    position: relative
+    text-align: center
+    &-explain
+      text-align: center
+      color: $color-yellow
+      margin-bottom: 10px
+      +georgia()
+      +rmin($screen-lg)
+        position: absolute
+        right: 30px
+        width: 130px
+        text-align: left
+        top: 60px
+    +rmin($screen-lg)
       padding-left: 30px
+      text-align: left
+
   &-bottom
     text-align: center
     border-top: 1px solid #a9a4a2
@@ -314,6 +341,70 @@
       position: absolute
       right: 40px
       top: 28px
+  &-pravda
+    .promo-leftside-additional
+      h4
+        color: #000
+        opacity: 1
+        font-weight: 400
+        font-size: 19px
+        margin-bottom: 0
+      p
+        margin-top: 10px
+        margin-bottom: 0
+      +rmin($screen-lg)
+        padding-right: 100px
+    .item-features-list
+      max-width: 400px
+      position: relative
+        +rmin($screen-lg)
+          display: block
+      li
+        margin: 30px 0
+        &:last-child
+          &:after
+            content: ''
+            width: 41px
+            height: 150px
+            position: absolute
+            bottom: 120px
+            left: 270px
+            display: none
+            background-image: url(../images/curve-arr-orange.png)
+            background-position: 0 0
+            +tr(all 1s 7s)
+        .text
+          padding-left: 80px
+          color: #141414
+          opacity: .9
+        &:before
+          width: 58px
+          height: 58px
+          line-height: 55px
+          top: 10px
+          left: 0
+  .ready-book-link
+    text-align: center
+    display: block
+    text-decoration: none
+    margin-bottom: 40px
+    svg
+      margin-right: 12px
+    svg path
+      fill: #ed8a33
+    .text
+      line-height: .9
+      vertical-align: top
+      position: relative
+      top: 2px
+      display: inline-block
+      border-bottom: 1px dotted $color-blue
+    &:hover
+      span
+        border-color: transparent
+    +rmin($screen-lg)
+      display: inline-block
+      padding-left: 120px
 
 .ruble
   font-family: 'ruble'
@@ -392,6 +483,9 @@
     color: #383838
     +rmin($screen-sm)
       margin-top: -4px
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)
+    background-color: #efeeec
+    border-color: #848381
 
 .gallery-slider
   text-align: center
@@ -812,11 +906,13 @@
   padding-top: 50px
   padding-bottom: 40px
   +rmin($screen-sm)
-    width: 490px
+    width: 400px
     display: inline-block
     margin: 40px 20px
     padding-left: 48px
     padding-right: 48px
+  +rmin($screen-md)
+    width: 490px
   &:before
     content: ''
     width: 70px
@@ -999,7 +1095,6 @@
     text-align: center
     margin-top: 50px
 
-
 /* start additional-item */
 .additional-item
   border: 1px solid #d9d9d9
@@ -1045,9 +1140,13 @@
     color: #000
     line-height: 1.4
     max-width: 340px
+    margin-left: auto
+    margin-right: auto
     +georgia()
     +rmin($screen-sm)
       margin-top: 0
+      margin-left: 0
+      margin-right: 0
     +rmin($screen-lg)
       font-size: 18px
   .content-cell
@@ -1056,10 +1155,12 @@
       padding-left: 30px
       padding-right: 40px
   .price-cell
+    margin-top: 30px
     +rmin($screen-sm)
       border-left: 1px solid #cccccc
       padding-left: 30px
       width: 150px
+      margin-top: 0
   .circle-cell
     +rmin($screen-sm)
       width: 114px
@@ -1078,7 +1179,6 @@
         background-color: $color-red
       svg path
         fill: white
-
   +rmin($screen-sm)
     padding-top: 40px
     padding-bottom: 40px
@@ -1094,3 +1194,227 @@
     .price-cell
       display: table-cell
       vertical-align: middle
+
+/* start seo-block */
+.any-questions
+  padding: 50px 0
+  background-color: #eae8e4
+  text-align: center
+  .section-heading
+    margin-bottom: 0
+  p
+    opacity: .6
+    margin: 0
+  .btn
+    margin-top: 30px
+/* end seo-block */
+
+/* start seo-block */
+.seo-desc
+  padding: 40px 0
+  h5
+    font-size: 17px
+    margin-bottom: 0
+    +calibri(700)
+  .container
+    max-width: 1200px
+/* end seo-block */
+
+/* start warning */
+.warning
+  // border: 3px solid #f15c44
+  max-width: 1410px
+  margin: 0 auto 30px
+  padding: 30px 15px 40px
+  text-align: center
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    background-color: #f15c44
+    height: 3px
+    width: 100%
+    transform: translateX(-102%)
+    +tr(transform 1s 0.2s)
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    background-color: #f15c44
+    height: 100%
+    width: 3px
+    transform: translateY(-102%)
+    +tr(transform 1s 1.2s)
+  +rmin($screen-sm)
+    margin-bottom: 50px
+  h3
+    margin-top: 0
+    font-size: 22px
+    +rmin($screen-sm)
+      font-size: 26px
+  .inner
+    max-width: 1140px
+    margin: 0 auto
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      bottom: 0
+      background-color: #f15c44
+      height: 3px
+      width: 100%
+      transform: translateX(102%)
+      +tr(transform 1s 2.2s)
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      background-color: #f15c44
+      height: 100%
+      width: 3px
+      transform: translateY(102%)
+      +tr(transform 1s 3.2s)
+  .btn
+    margin-top: 20px
+  &.aos-animate
+    &:before, &:after,
+    .inner:before,
+    .inner:after
+      transform: none
+/* end warning */
+
+/* start other-items */
+.other-items
+  background-color: #eae8e4
+  padding: 40px 0
+  .container
+    max-width: 1000px
+    .row > div:first-child
+      +rmin($screen-sm)
+        .other-items-block
+          &:before
+            content: ''
+            position: absolute
+            right: -15px
+            top: 50px
+            background-color: #bbbab6
+            height: 236px
+            width: 1px
+  &-block
+    text-align: center
+    position: relative
+    margin: 40px 0
+    h4
+      font-size: 24px
+      margin-bottom: 10px
+      padding-bottom: 14px
+      position: relative
+      &:before
+        content: ''
+        width: 184px
+        height: 2px
+        z-index: 10
+        margin-left: -92px
+        bottom: 0
+        left: 50%
+        position: absolute
+        background: #333333
+    p
+      margin-bottom: 10px
+    .price
+      font-size: 20px
+      margin-bottom: 20px
+    .btn
+      width: 185px
+    .link
+      display: block
+      margin-top: 10px
+/* end other-items */
+
+/* start popups */
+.popup-video
+  width: 300px
+  height: 200px
+  margin: 0 auto
+  background-color: #fff
+  position: relative
+  +rmin(400px)
+    width: 380px
+  +rmin($screen-sm)
+    width: 900px
+    height: 500px
+  iframe
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+/* end popups */
+
+/* start popup-additional-item */
+.popup-additional-item
+  max-width: 995px
+  padding: 40px 15px
+  background-color: #fff
+  text-align: center
+  margin: 0 auto
+  position: relative
+  .inner
+    max-width: 690px
+    margin: 0 auto
+  .desc
+    color: rgba(black, 0.9)
+  .btn
+    margin-top: 30px
+  .section-heading
+    padding-bottom: 20px
+    &:after
+      content: ''
+      width: 400px
+      height: 1px
+      bottom: 0
+      left: 50%
+      margin-left: -200px
+      background-color: #d9d9d9
+      position: absolute
+  .img-zoom-link
+    position: relative
+    margin-bottom: 40px
+    display: inline-block
+    .circle
+      position: absolute
+      right: -20px
+      bottom: -20px
+      background-color: #fff
+      border: 1px solid #b9b9b9
+      width: 64px
+      height: 64px
+      svg
+        top: -2px
+      svg path
+        fill: rgba(#1b1b1b, 0.5)
+    &:hover
+      .circle
+        background-color: $color-red
+        border-color: $color-red
+        svg path
+          fill: white
+/* end popup-additional-item */
+
+.popup-close
+  position: absolute
+  top: 20px
+  right: 20px
+  span
+    +burger(17px, 2px, 5px, black, 3px)
+    +burger-to-cross()
+    opacity: 0.4
+    transition-property: all
+  &:hover
+    span
+      opacity: 1

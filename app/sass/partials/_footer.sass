@@ -1,0 +1,110 @@
+.footer
+  padding-top: 20px
+  .header
+    display: none
+    +rmin($screen-sm)
+      display: block
+  &-tags
+    padding: 20px 0
+    margin-top: 30px
+    border-top: 1px solid #d2d2d2
+    border-bottom: 1px solid #d2d2d2
+    display: none
+    +rmin($screen-sm)
+      display: block
+    .container
+      max-width: 1600px
+      overflow: hidden
+    &-list
+      text-align: center
+      +rmin($screen-lg)
+        margin-left: -30px
+        margin-right: -30px
+      li
+        display: inline-block
+        a
+          display: block
+          padding: 10px 45px
+          color: #000000
+          text-decoration: none
+          position: relative
+          padding-left: 10px
+          padding-right: 10px
+          +rmin($screen-lg)
+            padding-left: 45px
+            padding-right: 45px
+          &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            margin-top: -7px
+            width: 1px
+            height: 14px
+            background-color: #cccccc
+          +tr()
+          &:hover
+            color: $color-red
+  &-bottomline
+    padding: 40px 0
+    border-top: 1px solid #e6e6e6
+    text-align: center
+    font-size: 14px
+    opacity: .7
+    +rmin($screen-sm)
+      font-size: 15px
+    address
+      font-style: normal
+    .copyright
+      margin-bottom: 10px
+      +rmin($screen-sm)
+        margin-bottom: 0
+        display: inline-block
+        padding-right: 60px
+        position: relative
+        &:after
+          content: '/'
+          position: absolute
+          right: 24px
+          font-weight: 300
+          top: -1px
+
+    .address-first
+      display: inline-block
+    .address-second
+      margin-top: 6px
+
+
+.socials
+  text-align: center
+  padding: 40px 0 40px
+  p
+    margin-top: 0
+    margin-bottom: 14px
+    font-weight: 700
+
+.social-link
+  width: 50px
+  height: 50px
+  border: 1px solid #d1d1d1
+  border-radius: 50%
+  position: relative
+  display: inline-block
+  vertical-align: top
+  margin: 4px 4px
+  +tr()
+  svg
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  &.vk
+    svg
+      top: -2px
+  &:hover
+    background-color: $color-red
+    border-color: $color-red
+    svg path
+      fill: white

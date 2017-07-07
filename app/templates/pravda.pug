@@ -1,0 +1,549 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Главная: Книга правда'
+block content
+  // start promo
+  section.promo.promo-pravda 
+    .promo-inner
+      // start promo-top
+      .promo-top
+        nav.promo-navigation
+          a.promo-top-link(href="#" data-aos="fade-up" data-aos-anchor=".promo")
+            .wrap
+              h3 Газета в подарок
+              p на день рождения
+              img(src="images/pravda-small.jpg" alt="Газета в подарок")
+          a.promo-top-link.active(href="#" data-aos="fade-up" data-aos-anchor=".promo")
+            .wrap
+              h3 Книга «Правда»
+              p на день рождения
+              img(src="images/pravda-small.jpg" alt="Газета в подарок")
+          a.promo-top-link(href="#" data-aos="fade-up" data-aos-anchor=".promo")
+            .wrap
+              h3 Газета в подарок
+              p на юбилей свадьбы
+      // end promo-top
+      // start promo-middle
+      .promo-middle 
+        .promo-leftside(data-aos="fade-left" data-aos-delay="1000" data-aos-anchor=".promo")
+          h1 Книга «Правда» — оригинальный подарок #[br]на День рождения!
+          .promo-leftside-lined
+            .range.range-single
+              .range-block
+                span.word цена
+                .price 
+                  span 6990
+                  i.ruble e
+            a.btn.btn-yellow.btn-icon(href="#")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+          .promo-leftside-additional
+            h4 Что представляет собой книга «Правда»?
+            p Этот эксклюзивный подарок руководителю, коллеге или родным создается специально для виновника торжества и содержит набор статей из «Правды» за определенные важные дни из его биографии – День рождения,  совершеннолетие, свадьба, рождение детей и дальнейшие события
+        .promo-center(data-aos="fade-left" data-aos-delay="2000" data-aos-anchor=".promo")
+          .wrap
+            img.pravda-newspaper-pic(src="images/pravda-book-large.png" alt="Газета Правда")
+        .promo-rightside(data-aos="fade-in" data-aos-delay="3000" data-aos-anchor=".promo")
+          ul.reset-list.item-features-list
+            li(data-aos="fade-left" data-aos-delay="3000" data-aos-anchor=".promo" data-aos-duration="1000")
+              .text Мы берем номер газеты «Правда» за указанный Вами день
+            li(data-aos="fade-left" data-aos-delay="4000" data-aos-anchor=".promo" data-aos-duration="1000") 
+              .text Помещаем в него статью о каждом знаменательном событии
+            li(data-aos="fade-left" data-aos-delay="5000" data-aos-anchor=".promo" data-aos-duration="1000") 
+              .text Дизайнер по Вашему пожеланию дополнит материалы книги фотографией именинника
+            li(data-aos="fade-left" data-aos-delay="6000" data-aos-anchor=".promo" data-aos-duration="1000") 
+              .text Благодаря мастерству наших дизайнеров фото и статья будут органично вписаны в страницы книги!
+          a.ready-book-link(href="#" data-aos="fade-up" data-aos-delay="6000" data-aos-anchor=".promo" data-aos-duration="800")
+            include data/picture.svg
+            span.text Фото готовой книги
+          .promo-video(data-aos="fade-up" data-aos-delay="7000" data-aos-anchor=".promo")
+            .promo-video-explain Объясняющее видео
+            a.promo-video-link.popup-link(href="#popup-video")
+              img(src="images/video-book.jpg" alt="Видео")
+      // end promo-middle
+      // start promo-bottom
+      .promo-bottom(data-aos="fade-in" data-aos-delay="9000" data-aos-anchor=".promo")
+        .promo-bottom-links
+          a.promo-bottom-link(href="#")
+            span Подробнее о процессе заказа
+            .circle
+              include data/picture.svg
+        .share-block
+          .share-text
+            include data/mail.svg
+            span.text Поделиться
+          .ya-share2(data-services="vkontakte,odnoklassniki,twitter,facebook")
+      // end promo-bottom
+  // end promo
+  // start gallery
+  section.gallery 
+    .container
+      h2.section-heading.colored-red(data-aos="fade-down" data-aos-anchor=".gallery") Примеры наших работ
+      h4(data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="1000") Вам не нужно писать статью самим. Все уже готово! 
+      p(data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="1800") В форме заказа вы можете выбрать шаблон статьи для газеты ко дню рождения или не добавлять свою статью
+      .lamps(data-aos="fade-in" data-aos-anchor=".gallery" data-aos-delay="2600")
+        .lamp
+        .lamp.lamp-center
+        .lamp.lamp-right
+      .gallery-slider.swiper-container
+        .swiper-wrapper
+          // start slide
+          .swiper-slide
+            .pic-big(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="0")
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="0")
+                img(src="images/gallery2.jpg")
+              .pic-mini(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="")
+                img(src="images/gallery3.jpg")
+              .pic-mini(data-aos="fade-right" data-aos-anchor=".gallery-slider" data-aos-delay="")
+                img(src="images/gallery2.jpg")
+              .pic-mini(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="")
+                img(src="images/gallery3.jpg")
+            .pic-big(data-aos="fade-left" data-aos-anchor=".gallery-slider" data-aos-delay="")
+              img(src="images/gallery1.jpg")
+          // end slide
+          // start slide
+          .swiper-slide
+            .pic-big 
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+            .pic-big
+              img(src="images/gallery1.jpg")
+          // end slide
+          // start slide
+          .swiper-slide
+            .pic-big 
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+            .pic-big
+              img(src="images/gallery1.jpg")
+          // end slide
+          // start slide
+          .swiper-slide
+            .pic-big 
+              img(src="images/gallery1.jpg")
+            .pic-group
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+              .pic-mini
+                img(src="images/gallery2.jpg")
+              .pic-mini
+                img(src="images/gallery3.jpg")
+            .pic-big
+              img(src="images/gallery1.jpg")
+          // end slide
+        .swiper-pagination
+  // end gallery
+  // start reviews
+  section.reviews 
+    .container
+      .reviews-top(data-aos="fade-up" data-aos-anchor=".reviews" data-aos-delay="0")
+        h2.section-heading О нас уже более 3600 отзывов!
+        a.leave-review-link(href="#")
+          .circle
+            include data/pero.svg
+          span.text Оставить отзыв
+    .reviews-slider.swiper-container
+      a.arr.arr-left(href="#" role="button")
+      a.arr.arr-right(href="#" role="button")
+      .swiper-wrapper
+        .swiper-slide
+          .reviews-item(data-aos="fade-left" data-aos-anchor=".reviews" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.reviews-item-name Светлана
+            p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+        .swiper-slide(data-aos="fade-left" data-aos-anchor=".reviews" data-aos-delay="800")
+          .reviews-item
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.reviews-item-name Светлана
+            p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+        .swiper-slide(data-aos="fade-left" data-aos-anchor=".reviews" data-aos-delay="1200")
+          .reviews-item
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.reviews-item-name Светлана
+            p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+        .swiper-slide
+          .reviews-item
+            .date
+              span.icon-calendar
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.reviews-item-name Светлана
+            p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+        .swiper-slide
+          .reviews-item
+            .date
+              span.icon-calendar
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.reviews-item-name Светлана
+            p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+        .swiper-slide
+          .reviews-item
+            .date
+              span.icon-calendar
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.reviews-item-name Светлана
+            p Команда Timesprint.ru ! Благодарим за быстрое, качественное , профессиональное исполнение нашего заказа. Менеджеры были очень вежливы... 
+      a.all-reviews-link(href="") 
+        span Все отзывы
+      .swiper-pagination
+  // end reviews
+  // start action-section
+  section.action-section
+    .circle-present(data-aos="zoom-out" data-aos-anchor=".action-section")
+    .container
+      h2.section-heading.section-heading-large(data-aos="fade-up" data-aos-anchor=".action-section" data-aos-delay="400") Необычный подарок родным и близким — #[br] газета «Правда» ко дню рождения!
+      a.btn.btn-icon(href="" data-aos="fade-up" data-aos-anchor=".action-section" data-aos-delay="800")
+        span.text Сделать подарок
+        .circle
+          i.icon.icon-cart
+  // end action-section
+  // start video
+  .container
+    .video(data-aos="zoom-out")
+      .video-top
+      .video-content
+        iframe(src="https://www.youtube.com/embed/54HGwImd5yQ" frameborder="0" allowfullscreen)
+      .video-bottom
+  // end video
+  // start features
+  section.features 
+    .container
+      h2.section-heading(data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".features") Почему с нами удобно и надежно
+      .group
+        .row
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .feature(data-aos="fade-left" data-aos-delay="800" data-aos-anchor=".features")
+              .circle
+                .inner
+                  include data/medal.svg
+              p Мы — Авторы идеи данного подарка #[br] и ручаемся за качество. Подтверждено #[br] отзывами. Более 3000!
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .feature(data-aos="fade-left" data-aos-delay="1200" data-aos-anchor=".features")
+              .circle
+                .inner
+                  .circle-text 100#[span %]
+              p Мы — официальный партнер #[br] газеты "Правда". 100% гарантия #[br] достоверности. #[a(href="") Сертификат]
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3(data-aos="fade-left" data-aos-delay="1600" data-aos-anchor=".features")
+            .feature
+              .circle
+                .inner
+                  include data/clock.svg
+              p Изготавливаем быстро #[br] за 1-2 дня или срочно день #[br] в день
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .feature(data-aos="fade-left" data-aos-delay="2000" data-aos-anchor=".features")
+              .circle
+                .inner
+                  include data/car.svg
+              p Быстрая и недорогая доставка #[br] в Москве, С-Петербурге — 350 Р,#[br] и по всей России — 490 Р
+  // end features
+  // start process-steps
+  section.process-steps 
+    .container
+      h2.section-heading(data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".process-steps") Как все будет происходить
+      .group
+        // start process-step
+        .process-step(data-aos="fade-left" data-aos-delay="800" data-aos-anchor=".process-steps")
+          .circle 1
+          .text Вы оформляете заказ на сайте нажав кнопку #[a(href="#") Заказать]. Также можно приехать к нам в офис в Москве
+        // end process-step
+        // start process-step
+        .process-step(data-aos="fade-left" data-aos-delay="1200" data-aos-anchor=".process-steps")
+          .circle 2
+          .text Далее выбираете рамку, дату газеты, добавляете фото и текст статьи. #[br] #[a(href="") Шаблоны статей]
+        // end process-step
+        // start process-step
+        .process-step(data-aos="fade-left" data-aos-delay="1600" data-aos-anchor=".process-steps")
+          .circle 4
+          .text Мы связываемся с Вами для уточнения деталей по заказу и спрашиваем Ваши пожелания
+        // end process-step
+        // start process-step
+        .process-step(data-aos="fade-left" data-aos-delay="2000" data-aos-anchor=".process-steps")
+          .circle 4
+          .text Мы запрашиваем газету из архива и изготавливаем заказ в кратчайшие сроки
+        // end process-step
+        // start process-step
+        .process-step(data-aos="fade-left" data-aos-delay="2400" data-aos-anchor=".process-steps")
+          .circle 5
+          .text Далее мы передаем заказ в доставку. Также можно забрать заказ самовывозом
+        // end process-step
+  // end process-steps
+  // start deadlines
+  .deadlines 
+    .container
+      h2.section-heading(data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".deadlines") Сроки выполнения заказа
+      p(data-aos="fade-in" data-aos-delay="800" data-aos-anchor=".deadlines") Срочность заказа отмечается на последнем шаге заказа в дополнительных услугах. #[br] Ее стоимость #[span.colored-red 300 Р].  Согласование макета — #[span.colored-red 300 Р]
+      .deadline.deadline-gray(data-aos="fade-right" data-aos-delay="1200" data-aos-anchor=".deadlines")
+        .top
+          h3 Обычный заказ
+          p 1-2 рабочих дня
+        .deadline-delivery
+          h4 При заказе до 16.00 (МСК)
+          .deadline-delivery-block
+            p По Москве:
+            a(href="#") Самовывоз в Москве
+            a(href="#") Доставка по Москве
+          .deadline-delivery-block.middle
+            p По Санкт-Петербургу:
+            a(href="#") Самовывоз в Санкт-Петербурге
+            a(href="#") Доставка по Санкт-Петербургу
+          .deadline-delivery-block
+            p По Росcии:
+            a(href="#") Доставка по России
+      .deadline.deadline-red(data-aos="fade-left" data-aos-delay="1200" data-aos-anchor=".deadlines")
+        .top
+          h3 Срочный заказ
+          p день в день
+        .deadline-delivery
+          h4 При заказе до 16.00 (МСК)
+          .deadline-delivery-block
+            p По Москве:
+            a(href="#") Самовывоз в Москве
+            a(href="#") Доставка по Москве
+          .deadline-delivery-block.middle
+            p По Санкт-Петербургу:
+            a(href="#") Самовывоз в Санкт-Петербурге
+            a(href="#") Доставка по Санкт-Петербургу
+          .deadline-delivery-block
+            p По Росcии:
+            a(href="#") Доставка по России
+      .deadlines-bottom
+        a.btn.btn-icon(href="")
+          span.text Заказать
+          .circle
+            i.icon.icon-cart
+  // end deadlines
+  // start items-showcase
+  .items-showcase 
+    .group
+      .showcase-item(data-aos="fade-right-big" data-aos-delay="200" data-aos-duration="1400")
+        .img
+          img(src="images/showcase-item1.png")
+        h4 Газета в багетной рамке
+        .price 
+          .circle
+            .icon.icon-cart-red
+          span.text 2 390 Р
+        .overlay
+          .inner
+            p Этот вариант исполнения подарка является наиболее популярным. Рекомендуем его. Передовица газеты "Правда" в подарок оформляется в красивой багетной рамке на ваш выбор. Размер изображения газеты в рамке 30*45 см, а размер рамки порядка 40*55 см. Газету вы получите в подарочной коробке, к которой прилагается фирменный пакет. Дополнительно можно заказать все листы газеты в распечатанном виде, либо в электронном виде на CD. С этим дополнением подарок  ко дню рождения или юбилею станет более полным
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+      .showcase-item.showcase-item-gray(data-aos="fade-left-big" data-aos-delay="200" data-aos-duration="1400")
+        .img
+          img(src="images/showcase-item2.png")
+        h4 Газета на бумаге А3 в тубусе
+        .price 
+          .circle
+            .icon.icon-cart-red
+          span.text 1 490 Р
+        .overlay
+          .inner
+            p Этот вариант исполнения подарка является наиболее популярным. Рекомендуем его. Передовица газеты "Правда" в подарок оформляется в красивой багетной рамке на ваш выбор. Размер изображения газеты в рамке 30*45 см, а размер рамки порядка 40*55 см. Газету вы получите в подарочной коробке, к которой прилагается фирменный пакет. Дополнительно можно заказать все листы газеты в распечатанном виде, либо в электронном виде на CD. С этим дополнением подарок  ко дню рождения или юбилею станет более полным
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+      .showcase-item.showcase-item-gray(data-aos="fade-right-big" data-aos-delay="200" data-aos-duration="1400")
+        .img.img-shifted
+          img(src="images/showcase-item3.png")
+        h4 Газета на бумаге А3 в тубусе
+        .price 
+          .circle
+            .icon.icon-cart-red
+          span.text 1 490 Р
+        .overlay
+          .inner
+            p Этот вариант исполнения подарка является наиболее популярным. Рекомендуем его. Передовица газеты "Правда" в подарок оформляется в красивой багетной рамке на ваш выбор. Размер изображения газеты в рамке 30*45 см, а размер рамки порядка 40*55 см. Газету вы получите в подарочной коробке, к которой прилагается фирменный пакет. Дополнительно можно заказать все листы газеты в распечатанном виде, либо в электронном виде на CD. С этим дополнением подарок  ко дню рождения или юбилею станет более полным
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+      .showcase-item.showcase-item(data-aos="fade-left-big" data-aos-delay="200" data-aos-duration="1400")
+        .img
+          img(src="images/showcase-item4.png")
+        h4 Газета на бумаге А3 в тубусе
+        .price 
+          .circle
+            .icon.icon-cart-red
+          span.text 1 490 Р
+        .overlay
+          .inner
+            p Этот вариант исполнения подарка является наиболее популярным. Рекомендуем его. Передовица газеты "Правда" в подарок оформляется в красивой багетной рамке на ваш выбор. Размер изображения газеты в рамке 30*45 см, а размер рамки порядка 40*55 см. Газету вы получите в подарочной коробке, к которой прилагается фирменный пакет. Дополнительно можно заказать все листы газеты в распечатанном виде, либо в электронном виде на CD. С этим дополнением подарок  ко дню рождения или юбилею станет более полным
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+  // end items-showcase
+  // start additional-items
+  section.additional-items 
+    h2.section-heading В дополнении к выбранному варианту изготовления вы можете #[span.colored-red дополнительно приобрести]
+    p Выбирается на 4-м шаге при заказе
+    .group
+      // start additional-item
+      .additional-item 
+        .inner
+          .display-table
+            .circle-cell
+              .circle A3
+            .content-cell
+              p Все страницы газеты в распечатанном виде на уменьшенном формате - A3
+              a(href="#") Подробнее
+            .price-cell
+              a.additional-photo-link.popup-link(href="#popup-additional-item1") 
+                .circle
+                  include data/photo.svg
+                span.price 490 Р
+      // end additional-item
+      // start additional-item
+      .additional-item 
+        .inner
+          .display-table
+            .circle-cell
+              .circle A2
+            .content-cell
+              p Все страницы газеты в распечатанном виде в оригинальном формате - А2
+              a(href="#") Подробнее
+            .price-cell
+              a.additional-photo-link.popup-link(href="#") 
+                .circle
+                  include data/photo.svg
+                span.price 790 Р
+      // end additional-item
+      // start additional-item
+      .additional-item 
+        .inner
+          .display-table
+            .circle-cell
+              .circle DVD
+            .content-cell
+              p DVD-открытка с кинохроникой года рождения вашего именинника
+              a(href="#") Подробнее
+            .price-cell
+              a.additional-photo-link.popup-link(href="#") 
+                .circle
+                  include data/photo.svg
+                span.price 790 Р
+      // end additional-item
+      // start additional-item
+      .additional-item 
+        .inner
+          .display-table
+            .circle-cell
+              .circle CD
+            .content-cell
+              p Электронная версия газеты на CD
+              a(href="#") Подробнее
+            .price-cell
+              a.additional-photo-link.popup-link(href="#") 
+                .circle
+                  include data/photo.svg
+                span.price 390 Р
+      // end additional-item
+    .additional-items-bottom
+      a.btn.btn-icon(href="")
+        span.text Сделать заказ
+        .circle
+          i.icon.icon-cart
+  // end additional-items
+  // start any-questions
+  section.any-questions 
+    .container
+      h2.section-heading У вас остались вопросы?
+      p У нас более 3 600 довольных клиентов
+      a.btn.btn-gray.btn-large(href="#")
+        span.text Ответы на частые вопросы
+  // end any-questions
+  // start seo-desc
+  .seo-desc 
+    .container
+      .row
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .seo-desc-block
+            p Каждый из нас, выбирая подарок на день рождения, задается извечным вопросом «Что подарить, чтобы удивить?».  Согласитесь, всегда хочется преподносить такие подарки близким, которые оставят самые приятные воспоминания на долгие времена!
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .seo-desc-block
+            p Мы рады предложить вам отличный вариант памятного и в тоже время необычного подарка ко дню рождения - красиво оформленный в багетной рамке титульный лист газеты «Правда», выпущенной в прошлом, точно в дату рождения именинника.
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .seo-desc-block
+            h5 Кому подойдет этот подарок?
+            p Отлично подойдет в подарок всем рожденным в СССР (т.е. до 1991 г.), и в особенности старшему поколению, ведь "Правда" - это газета их молодости. Данный раритет будет органично смотреться в любом интерьере и добавит эксклюзивности.
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .seo-desc-block
+            h5 По какому поводу дарить газету?
+            p —  День рождения #[br] —  Годовщина свадьбы #[br] —  Юбилей
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+          .seo-desc-block
+            h5 Стоимость и сроки изготовления
+            p Подарок в Москве, Санкт-Петербурге, России стоит от 1390 до 2390 руб. в зависимости от выбранной рамки. Срок изготовления 1-2 дня. #[br] Возможно срочное изготовление день в день за 300 руб. Срочные заказы на текущий день принимаются до 16.00.
+  // end seo-desc
+  // start warning
+  .container
+    .warning(data-aos="fade-up" data-aos-duration="2000") 
+      .inner
+        h3 Внимание, остерегайтесь подделок!
+        p В интернете появились сайты, предлагающие подобный подарок. Эти сайты делают подарок, используя подложные номера газет «Правда» или иных газет, не соответствующих их реальной дате выпуска. Помните, только компания Timesprint имеет доступ к архиву  и обладает исключительными авторскими правами на изготовление подарков с использованием газет «Правда». Оригинал сертификата можно посмотреть у нас в офисе или на странице О нас.
+        a.btn(href="#")
+          span.text Подробнее
+  // end warning
+  // start other-items
+  .other-items
+    .container
+      h2.section-heading Наши другие оригинальные подарки
+      .row
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .other-items-block
+            .img
+              img(src="images/pravda-book.png" alt="Книга «Правда»")
+            h4 Книга «Правда»
+            p Эксклюзивный подарок начальнику, коллеге, #[br] родным на день рождения и юбилей
+            .price от 6 990 Р
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+            a(href="#").link Подробнее
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .other-items-block
+            .img
+              img(src="images/showcase-item1.png" alt="Газета «Правда»")
+            h4 Газета «Правда»
+            p Эксклюзивный подарок начальнику,  коллеге, #[br] родным на день рождения и юбилей
+            .price от 1 390 Р
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+            a(href="#").link Подробнее
+  // end other-items

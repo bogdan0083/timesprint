@@ -275,7 +275,10 @@
   @each $sprite in $sprites
     $sprite-name: nth($sprite, 10)
     .icon-#{$sprite-name}
-      @include sprite($sprite)
+      +sprite-width($sprite)
+      +sprite-height($sprite)
+      &:before
+        @include sprite($sprite)
 
 =calibri($weight: 400)
   font-family: 'Calibri', 'Calibri Custom', sans-serif
