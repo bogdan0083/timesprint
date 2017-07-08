@@ -61,6 +61,13 @@ $(document).ready(function () {
     }
   });
 
+  $('.book-details-slider').swiper({
+    pagination: '.book-details .swiper-pagination',
+    nextButton: '.book-details .arr-right',
+    prevButton: '.book-details .arr-left',
+    speed: 1000,
+    loop: true
+  });
   // Окрашиваем в белый цвет прозрачный футер
 
   if ($(window).width() > 900) {
@@ -68,9 +75,11 @@ $(document).ready(function () {
     $(window).on('scroll', function (e) {
       if ($(window).scrollTop() < 240 && hdrIsFixed) {
         $header.removeClass('header-fixed');
+        $outWrapper.css('padding-top', 0);
         hdrIsFixed = false;
       } else if ($(window).scrollTop() > 240 && !hdrIsFixed){
         $header.addClass('header-fixed');
+        $outWrapper.css('padding-top', $('.js-header').outerHeight());
         hdrIsFixed = true;
       }
     });

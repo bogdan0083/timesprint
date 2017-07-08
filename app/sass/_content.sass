@@ -7,7 +7,7 @@
 .promo
   background-color: #ede9e8
   max-width: 1655px
-  margin: 0 auto
+  margin: 0 auto 40px
   padding: 10px 10px 30px
   +rmin($screen-md)
     padding-bottom: 80px
@@ -193,6 +193,7 @@
       border-right: 1px solid #bdbaba
   &-center
     position: relative
+    text-align: center
     .wrap
       position: relative
       display: inline-block
@@ -357,6 +358,21 @@
         margin-bottom: 0
       +rmin($screen-lg)
         padding-right: 100px
+    .promo-bottom-link
+      span
+        margin-left: 0
+      .circle
+        margin-left: 14px
+        border: 1px solid #ffa200
+        background-color: #f4f2f1
+      svg path
+        fill: #ea8400
+      &:hover
+        .circle
+          background-color: #ffa200
+          border-color: #ffa200
+        svg path
+          fill: white
     .item-features-list
       max-width: 400px
       position: relative
@@ -464,6 +480,8 @@
   padding: 20px 0
   text-align: center
   overflow: hidden
+  +rmin($screen-sm)
+    padding-top: 40px
   .container
     max-width: 1400px
   .section-heading
@@ -488,8 +506,7 @@
     color: #191919
   p
     color: #383838
-    +rmin($screen-sm)
-      margin-top: -4px
+    margin-top: 4px
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)
     background-color: #efeeec
     border-color: #848381
@@ -539,14 +556,14 @@
     width: 100%
     max-width: 400px
     +rmin($screen-lg)
-      max-width: 500px
+      max-width: 540px
   .pic-mini
     padding: 15px
     display: inline-block
     margin: 0 3px 3px
     width: 160px
     +rmin($screen-lg)
-      margin: 0 10px 10px
+      margin: 0 4px 10px
       width: auto
     &:before
       background-image: url(../images/frame-mini.png)
@@ -623,6 +640,18 @@
     &.aos-animate:before
       opacity: 0.9
       width: 502px
+  &-yellow
+    .reviews-top
+      &:before
+        background-color: $color-yellow
+    .leave-review-link
+      .text
+        color: $color-yellow
+        border-color: $color-yellow
+      &:hover
+        .circle
+          border-color: $color-yellow
+          background-color: $color-yellow
 
 .leave-review-link
   color: $color-red
@@ -647,29 +676,6 @@
   padding-bottom: 60px
   margin: 0 auto
   max-width: 1750px
-  .arr
-    position: absolute
-    width: 24px
-    height: 144px
-    position: absolute
-    left: 10px
-    top: 55px
-    background-image: url(../images/arr-left.svg)
-    background-repeat: no-repeat
-    opacity: .7
-    z-index: 10
-    display: none
-    +tr()
-    &:hover
-      opacity: 1
-    &-right
-      right: 10px
-      background-image: url(../images/arr-right.svg)
-      left: auto
-      +rmin($screen-lg)
-        right: 14px
-    +rmin($screen-lg)
-      display: block
 
 .all-reviews-link
   text-decoration: none
@@ -744,6 +750,26 @@
     border-radius: 50%
     position: absolute
     background: white url(../images/present.svg) no-repeat center
+  .section-heading
+    line-height: 1.2
+    position: relative
+  &-book
+    .container
+      max-width: 1000px
+    .circle-present
+      border-color: $color-yellow
+      background-image: url(../images/present-yellow.svg)
+    .section-heading
+      padding-bottom: 24px
+      &:after
+        content: ''
+        position: absolute
+        left: 50%
+        bottom: 0
+        height: 1px
+        width: 322px
+        margin-left: -161px
+        background-color: #8c8c8c
 /* end action-section */
 
 .video
@@ -1101,7 +1127,23 @@
   &-bottom
     text-align: center
     margin-top: 50px
-
+  &-book
+    justify-content: center
+    .section-heading
+      margin-bottom: 30px
+      +rmin($screen-sm)
+        margin-bottom: 40px
+    .additional-item
+      .additional-photo-link
+        .circle
+          border-color: $color-yellow
+          svg path
+            fill: $color-yellow
+      &:hover
+        .circle
+          background-color: $color-yellow
+          svg path
+            fill: $color-yellow
 /* start additional-item */
 .additional-item
   border: 1px solid #d9d9d9
@@ -1157,7 +1199,8 @@
     +rmin($screen-lg)
       font-size: 18px
   .content-cell
-    opacity: .9
+    a
+      opacity: .9
     +rmin($screen-sm)
       padding-left: 30px
       padding-right: 40px
@@ -1186,6 +1229,12 @@
         background-color: $color-red
       svg path
         fill: white
+  &-single
+    max-width: 960px
+    +rmin($screen-sm)
+      width: 100%
+      margin-left: auto
+      margin-right: auto
   +rmin($screen-sm)
     padding-top: 40px
     padding-bottom: 40px
@@ -1214,6 +1263,20 @@
     margin: 0
   .btn
     margin-top: 30px
+  &-secondary
+    background-color: #fff
+    max-width: 1510px
+    margin: 0 auto
+    border-bottom: 1px solid #dddddd
+    padding-top: 80px
+    padding-bottom: 80px
+    .section-heading
+      margin-bottom: 10px
+    p
+      opacity: 1
+      color: #555
+    span
+      color: #000
 /* end seo-block */
 
 /* start seo-block */
@@ -1425,3 +1488,164 @@
   &:hover
     span
       opacity: 1
+
+.book-module
+  margin-top: 40px
+  margin-bottom: 40px
+
+.arr
+  position: absolute
+  width: 24px
+  height: 114px
+  position: absolute
+  left: 10px
+  top: 55px
+  background-image: url(../images/arr-left.svg)
+  background-repeat: no-repeat
+  opacity: .5
+  z-index: 10
+  display: none
+  +tr()
+  &:hover
+    opacity: 1
+  &-right
+    right: 10px
+    background-image: url(../images/arr-right.svg)
+    left: auto
+    +rmin($screen-lg)
+      right: 14px
+  +rmin($screen-lg)
+    display: block
+
+/* start book-details */
+.book-details
+  +rmin($screen-sm)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+  &-slider
+    background-color: #e3e3e3
+    text-align: center
+    position: relative
+    .arr
+      display: block
+      top: 50%
+      margin-top: 0
+      transform: translateX(-50%)
+      left: 20px
+      &-right
+        left: auto
+        right: 20px
+      +rmin($screen-md)
+        left: 40px
+        &-right
+          left: auto
+          right: 40px
+      +rmin($screen-lg)
+        left: 60px
+        &-right
+          left: auto
+          right: 60px
+    +rmin($screen-sm)
+      width: 50%
+    .swiper-slide
+      padding: 50px 0 80px
+      height: 300px
+      position: relative
+      +rmin($screen-sm)
+        height: auto
+        padding-top: 180px
+        padding-bottom: 175px
+    img
+      display: inline-block
+      max-width: 80%
+      max-height: 100%
+      width: auto
+      height: auto
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    .swiper-pagination
+      bottom: 40px
+      +rmin($screen-sm)
+        bottom: 100px
+  .inner
+    max-width: 700px
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 40px
+    padding-bottom: 40px
+    margin: 0 auto
+    > .block
+      margin: 40px 0
+    +rmin($screen-md)
+      padding-left: 70px
+      margin-left: 0
+    +rmin($screen-lg)
+      padding-left: 100px
+  &-info
+    .bottomline
+      padding-top: 20px
+      border-top: 2px solid #282828
+      margin-top: 40px
+      max-width: 460px
+      margin: 0 auto
+      text-align: center
+      +rmin($screen-sm)
+        text-align: left
+        margin-left: 0
+    .range
+      text-align: left
+    .btn
+      margin-top: 20px
+      +rmin(350px)
+        width: 185px
+        margin-left: 30px
+        margin-top: 9px
+        vertical-align: top
+    +rmin($screen-sm)
+      width: 50%
+      margin-left: 0
+  .section-heading
+    line-height: 1.4
+    position: relative
+    padding-bottom: 20px
+    +rmin($screen-sm)
+      text-align: left
+    &:after
+      content: ''
+      position: absolute
+      height: 1px
+      left: 50%
+      bottom: 0
+      width: 70%
+      transform: translateX(-50%)
+      background-color: #000
+      opacity: .2
+      +rmin($screen-sm)
+        left: 0
+        transform: none
+/* end book-details */
+
+.custom-list
+  +counter(list1, "")
+  li
+    width: 100%
+    margin: 10px 0
+    position: relative
+    padding-left: 40px
+    &:before
+      position: absolute
+      background-color: #fff
+      width: 26px
+      height: 26px
+      border: 1px solid #b0b0b0
+      border-radius: 50%
+      left: 0
+      top: 15px
+      margin-top: -16px
+      text-align: center
+      padding-top: 1px
+      font-size: 15px
+      color: $color-yellow
