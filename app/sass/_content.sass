@@ -1649,3 +1649,721 @@
       padding-top: 1px
       font-size: 15px
       color: $color-yellow
+
+/* start layout */
+.layout
+  padding-top: 30px
+  .section-heading
+    max-width: 300px
+    margin: 0 auto
+    +rmin($screen-sm)
+      text-align: left
+      max-width: none
+      margin-bottom: 0
+/* end layout */
+/* start layout-order */
+.layout-order
+  padding-bottom: 60px
+  +rmin($screen-sm)
+    padding-bottom: 80px
+/* end layout-order */
+
+/* start order */
+.order
+  &-steps-list
+    text-align: center
+    margin-top: 20px
+    margin-bottom: 20px
+    +clr()
+    +rmin($screen-sm)
+      margin-bottom: 40px
+    &-wrap
+      overflow: hidden
+    +rmin($screen-lg)
+      margin-left: -110px
+      margin-right: -140px
+    li
+      display: inline-block
+      width: 49%
+      vertical-align: top
+      margin: 20px 0
+      text-align: center
+      +rmin($screen-sm)
+        text-align: left
+      +rmin($screen-md)
+        width: 25%
+        float: left
+        text-align: center
+        margin-bottom: 0
+        margin-top: 0
+      a
+        display: block
+        color: #191919
+        text-decoration: none
+        font-size: 15px
+        position: relative
+        min-height: 130px
+        +tr()
+        &:after
+          content: ''
+          position: absolute
+          height: 5px
+          left: 0
+          bottom: 0
+          width: 100%
+          border-top: 1px solid #777574
+          border-bottom: 1px solid #bdbab9
+        +rmin($screen-sm)
+          padding-bottom: 30px
+          min-height: 0
+          margin-right: -3px
+        &:hover
+          color: $color-red
+          .circle
+            border-color: $color-red
+            color: inherit
+        &.active
+          font-weight: 700
+          .circle
+            border: 2px solid $color-red
+            line-height: 45px
+          &:after
+            background-color: #202020
+            border-color: #202020
+    .circle
+      display: block
+      margin: 0 auto 6px
+      height: 50px
+      width: 50px
+      line-height: 47px
+      +tr()
+      +rmin($screen-sm)
+        display: inline-block
+        margin-right: 10px
+  &-preview
+    position: relative
+    max-width: 450px
+    +rmin($screen-md)
+      padding-right: 70px
+    &-gallery
+      margin-bottom: 10px
+      +rmin($screen-md)
+        position: absolute
+        margin-bottom: 0
+        right: 0
+        top: 0
+      &-link
+        display: inline-block
+        width: 60px
+        height: 60px
+        background-position: center
+        border: 1px solid #b8b8b8
+        margin-right: 20px
+        +rmin($screen-md)
+          margin-right: 0
+          margin-bottom: 20px
+          display: block
+    &-image
+      background-position: center
+      background-size: 235px
+      background-repeat: no-repeat
+      display: inline-block
+      +rmin($screen-sm)
+        background-size: 266px
+      img
+        display: block
+        height: 405px
+        +rmin($screen-sm)
+          height: 450px
+  &-overall
+    padding: 30px 0 18px
+    border-top: 1px solid #2f2f2f
+    border-bottom: 1px solid #2f2f2f
+    margin-top: 40px
+    width: 100%
+    max-width: 450px
+    .range
+      width: 200px
+      line-height: 1.3
+      .price
+        margin-top: 6px
+    .btn-wrap
+      padding-top: 18px
+      margin-top: 20px
+      border-top: 1px solid #e5e5e5
+      position: relative
+      text-align: center
+      +rmin($screen-sm)
+        text-align: left
+    .btn
+      width: 185px
+      .icon
+        position: relative
+        top: -2px
+    .link
+      margin-top: 10px
+      margin-left: 20px
+      +rmin($screen-sm)
+        position: absolute
+        margin-top: 0
+        right: 0
+        top: 36px
+
+  &-variant
+    &-block
+      position: relative
+      input
+        display: none
+        &:checked
+          + label + div
+              background-color: #f3f3f3
+              > .circle
+                border: 2px solid $color-red
+              > .text
+                font-weight: 700
+      label
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        cursor: pointer
+        z-index: 2
+    &-content
+      border: 1px solid #d9d9d9
+      margin-bottom: -1px
+      position: relative
+      padding: 20px
+      text-align: center
+      a
+        margin-left: 10px
+        font-weight: 400
+        display: inline-block
+        position: relative
+        z-index: 6
+        font-size: 16px
+      > .circle
+          width: 68px
+          height: 68px
+          margin-bottom: 20px
+          border-color: #d0d0d0
+          background-color: #ffffff
+          +tr(none)
+          +rmin($screen-sm)
+            margin-bottom: 0
+            flex-shrink: 0
+          img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+      > .text
+        margin-left: 20px
+        margin-right: 20px
+        +rmin($screen-sm)
+          font-size: 15px
+        +rmin($screen-md)
+          font-size: 17px
+      +rmin($screen-sm)
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        align-items: center
+        height: 89px
+        padding-top: 0
+        padding-bottom: 0
+        text-align: left
+      +rmin($screen-md)
+        padding-left: 30px
+      .price
+        margin-top: 20px
+        font-size: 20px
+        +rmin($screen-sm)
+          width: 200px
+          margin-left: auto
+          margin-top: 0
+          padding-left: 30px
+          text-align: left
+          position: relative
+          flex-shrink: 0
+          &:before
+            content: ''
+            height: 64px
+            width: 1px
+            position: absolute
+            left: 0
+            top: 50%
+            margin-top: -32px
+            background-color: #c2c2c2
+        +rmin($screen-lg)
+          width: 220px
+        .circle
+          width: 40px
+          height: 40px
+          border-color: $color-red
+          margin-right: 10px
+          background-color: #fff
+  &-frames
+    border: 1px solid #d9d9d9
+    padding: 20px
+    .inner
+      margin-right: -20px
+/* end order */
+
+.frame-item
+  width: 100px
+  text-align: left
+  margin: 20px 12px
+  display: inline-block
+  vertical-align: top
+  position: relative
+  label
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    cursor: pointer
+  .check
+    display: none
+    &:checked
+      + h5
+        font-weight: 700
+      ~ .frame-item-image
+        .circle
+          border-color: $color-red
+          border-width: 3px
+          &:after
+            background-color: $color-red
+            border-color: $color-red
+  h5
+    margin: 0
+    line-height: 1
+    font-size: 17px
+    +calibri()
+  .text
+    font-size: 20px
+    margin-bottom: 10px
+  &-image
+    width: 100px
+    height: 100px
+    display: block
+    background-size: 200% auto
+    padding-top: 40px
+    padding-left: 40px
+    cursor: pointer
+    .circle
+      width: 36px
+      height: 36px
+      border: 1px solid #9e9e9e
+      position: relative
+      +tr()
+      &:after
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 24px
+        height: 24px
+        margin-top: -12px
+        margin-left: -12px
+        border: 1px solid #c2c2c2
+        border-radius: 50%
+        +tr()
+
+.order-step1-form
+  .order-left
+    margin-bottom: 40px
+    +rmin($screen-sm)
+      width: 300px
+    +rmin($screen-md)
+      width: 500px
+    +rmin($screen-lg)
+      width: 545px
+  .order-right
+    +rmin($screen-sm)
+      width: 550px
+      order: 1
+    +rmin($screen-md)
+      width: 600px
+    +rmin($screen-lg)
+      width: 810px
+  .order-left, .order-right
+    h4
+      font-size: 25px
+      margin-bottom: 14px
+    +rmin($screen-sm)
+      > p
+        min-height: 200px
+  .order-left
+    margin-top: 40px
+    +rmin($screen-sm)
+      margin-top: 0
+    > p
+      +georgia()
+      font-size: 1.6
+      color: #191919
+  .order-right
+    > p
+      color: #383838
+      line-height: 1.6
+  +rmin($screen-sm)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+fieldset
+  padding: 0
+  border: 0
+
+.order-choose-texture
+  margin-bottom: 54px
+
+.texture-radio
+  margin-right: 18px
+  cursor: pointer
+  input
+    display: none
+    &:checked
+      + span
+        border: 2px solid $color-red
+        img
+          border-color: gray
+  img
+    display: block
+  span
+    display: inline-block
+    height: 68px
+    width: 68px
+    border-color: #d9d9d9
+    overflow: hidden
+    +tr(none)
+    img
+      position: absolute
+      border: 1px solid transparent
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 50%
+      overflow: hidden
+      width: 50px
+      height: 50px
+
+.order-step2-form
+  h2 span
+    color: #7d7d7d
+    display: block
+    +rmin($screen-sm)
+      display: inline
+  p
+    color: #383838
+    line-height: 1.7
+
+.panel
+  padding: 20px
+  font-size: 19px
+  margin-top: 40px
+  margin-bottom: 0
+  +georgia()
+  +rmin($screen-sm)
+    padding-left: 36px
+    padding-right: 36px
+    padding-bottom: 24px
+    padding-top: 26px
+  +rmin($screen-lg)
+    margin: 40px 0 0
+  &-error
+    color: $color-red
+    background-color: #fdece9
+
+.flex-container
+  h4
+    font-size: 25px
+
+.date-selects
+  margin-bottom: 40px
+
+.order-edit-message
+
+.js-editor
+  position: relative
+  height: 400px
+  width: 100%
+  +rmin($screen-sm)
+    height: 780px
+  textarea
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+  +rmin($screen-lg)
+    margin-left: -36px
+
+.order-choose-text
+  .wrap
+    +clr()
+
+.choose-text-item
+  width: 50%
+  text-align: left
+  padding: 22px 0 20px 0
+  vertical-align: top
+  position: relative
+  float: left
+  border-bottom: 1px solid #cccccc
+  +rmin($screen-md)
+    padding-left: 42px
+  .inner
+    padding-left: 53px
+    position: relative
+  label
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    cursor: pointer
+    z-index: 20
+  .check
+    display: none
+    &:checked
+      + h5
+        font-weight: 700
+        color: #000
+      ~ .circle
+          border-color: $color-red
+          border-width: 3px
+          &:after
+            background-color: $color-red
+            border-color: $color-red
+  h5
+    margin: 0
+    line-height: 1
+    font-size: 17px
+    color: #858585
+    +tr()
+    +calibri()
+  .text
+    font-size: 20px
+    margin-bottom: 0
+  .circle
+    width: 36px
+    height: 36px
+    border: 1px solid #9e9e9e
+    position: relative
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -21px
+    +tr()
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      width: 24px
+      height: 24px
+      margin-top: -12px
+      margin-left: -12px
+      border: 1px solid #c2c2c2
+      border-radius: 50%
+      +tr()
+
+.flex-container
+  .order-edit-message
+    margin-bottom: 40px
+    +rmin($screen-sm)
+      width: 300px
+    +rmin($screen-md)
+      width: 500px
+    +rmin($screen-lg)
+      width: 850px
+  .order-choose-text
+    +rmin($screen-sm)
+      width: 550px
+    +rmin($screen-md)
+      width: 600px
+    +rmin($screen-lg)
+      width: 570px
+  +rmin($screen-sm)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.delivery-wrap
+  .row
+    +rmin($screen-lg)
+      margin-left: -50px
+      margin-right: -50px
+      > div
+        padding-left: 50px
+        padding-right: 50px
+.delivery-period,
+.delivery-deadline
+  .range
+    display: block
+    padding: 30px 0
+    text-align: left
+    &:first-of-type
+      padding-top: 10px
+    &:last-of-type
+      padding-bottom: 0
+  h4
+    color: #000
+    padding-bottom: 20px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: #cccccc
+
+.delivery-period
+  p
+    color: #383838
+    max-width: 530px
+.delivery-deadline
+  +r($screen-sm)
+    .range-block
+      display: block
+      .text
+        font-size: 20px
+        line-height: 1.3
+      &:first-child:after
+        display: none
+
+.delivery-payment-info
+  background-color: #eae8e4
+  padding: 40px 0
+  margin: 40px 0
+  .inner
+    padding-left: 100px
+    position: relative
+    .svg-ic
+      position: absolute
+      left: 0
+      top: 50%
+      margin-top: -33px
+    h4
+      font-size: 21px
+      margin-top: 0
+      margin-bottom: 0
+    p
+      margin-bottom: 0
+      color: #383838
+      +rmin($screen-sm)
+        margin-top: 0
+
+.tabs:not(.tabs-no-style)
+  border: 1px solid #ececec
+  padding-top: 20px
+  +clr()
+  +rmin($screen-sm)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-around
+
+.tab-pane
+  text-decoration: none
+  padding: 20px 0
+  display: block
+  position: relative
+  border-bottom: 1px solid #383838
+  margin-bottom: -1px
+  &:after
+    content: ''
+    position: absolute
+    height: 5px
+    left: 0
+    bottom: 0
+    width: 100%
+    border-top: 1px solid #777574
+    border-bottom: 1px solid #bdbab9
+    display: none
+  .text
+    +georgia()
+    border-bottom: 1px dotted $color-blue
+    line-height: 1
+    margin-bottom: -3px
+    display: inline-block
+  .price
+    color: #000
+  &.js-active
+    .text
+      border: none
+      color: black
+      font-weight: 700
+    &:after
+      background-color: black
+      border-color: black
+  &:hover
+    .text
+      border: none
+  +rmin($screen-sm)
+    flex-grow: 1
+    border-bottom: 0
+    &:after
+      display: block
+  +rmin($screen-lg)
+    font-size: 20px
+    padding-left: 40px
+
+.delivery-slide
+  .panel
+    margin-top: 0
+
+.margined
+  +rmin($screen-lg)
+    margin-left: -36px
+    margin-right: -36px
+
+.delivery-area-block
+  padding: 20px 20px
+  border: 1px solid #cfcfcf
+  border-top: 0
+  +rmin($screen-md)
+    padding-left: 40px
+    padding-right: 40px
+  h4
+    font-size: 21px
+  p
+    color: #383838
+    +rmin($screen-lg)
+      font-size: 19px
+  &.flex
+    p
+      margin-top: 10px
+      margin-bottom: 10px
+    +rmin($screen-sm)
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      align-items: center
+  aside
+    +rmin($screen-sm)
+      width: 255px
+      margin-right: 40px
+    .price
+      padding-bottom: 40px
+      border-bottom: 1px solid #d8d8d8
+      span
+        font-size: 60px
+        line-height: .8
+        +georgia()
+        vertical-align: top
+      .ruble
+        font-size: 36px
+        margin-left: 14px
+    .text
+      font-size: 21px
+      margin-top: 20px
+      +georgia()

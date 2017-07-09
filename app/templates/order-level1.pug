@@ -1,0 +1,202 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Главная: Книга правда'
+block content
+  .layout.layout-order.order-page
+    .container
+      h2.section-heading Оформление заказа «Газета в подарок»
+      .order-steps-list-wrap
+        ul.reset-list.order-steps-list
+          li
+            a.active(href="#")
+              .circle 1
+              span.text Выбор текстуры и рамки
+          li
+            a(href="#")
+              .circle 2
+              span.text Напишите текст поздравления
+          li
+            a(href="#")
+              .circle 3
+              span.text Выберите фото именинника
+          li
+            a(href="#")
+              .circle 4
+              span.text Оформите заказ
+      form.order-step1-form(action="#")
+        // start order-right
+        .order-right
+          p На данном шаге вам необходимо выбрать вариант исполнения заказа. Багетная рамка - наиболее популярный вариант. Размер изображения газеты в рамке 30*45 см, а размер рамки порядка 40*55 см. Стоимость рамки это и есть полная стоимость вашего подарка, в который входит передовица газеты, рамка, подарочная коробка и фирменный пакет. По умолчанию выбрана первая рамка. Так же вы можете менять Текстуру газеты - цвет состаривания. Обратите пожалуйста внимание, что после выбора рамки, слева от укрупненного изображения, есть миниатюры фото, при нажатии на которые можно разглядеть рамку cо всех ракурсов.
+          h4 Выберите вариант исполнения заказа
+          .order-choose-variant
+            .order-variant-block
+              input(type="radio" name="order-variant" id="order-variant1")
+              label(for="order-variant1")
+              .order-variant-content
+                .circle
+                  img(src="images/variant-mini1.png")
+                .text Электронный вид #[a(href="#") Подробнее]
+                .price 
+                  .circle
+                    i.icon.icon-ruble-red
+                  span.text 790
+            .order-variant-block
+              input(type="radio" name="order-variant" id="order-variant2")
+              label(for="order-variant2")
+              .order-variant-content
+                .circle
+                  img(src="images/variant-mini2.png")
+                .text На бумаге в уменьшенном форм. А3. Тубус #[a(href="") Подробнее]
+                .price 
+                  .circle
+                    i.icon.icon-ruble-red
+                  span.text 790
+            .order-variant-block
+              input(type="radio" name="order-variant" id="order-variant3")
+              label(for="order-variant3")
+              .order-variant-content
+                .circle
+                  img(src="images/variant-mini3.png")
+                .text На бумаге в оригинальном форм. А2 #[a(href="") Подробнее]
+                .price 
+                  .circle
+                    i.icon.icon-ruble-red
+                  span.text 790
+            .order-variant-block
+              input(type="radio" name="order-variant" id="order-variant4" checked)
+              label(for="order-variant4")
+              .order-variant-content
+                .circle
+                  img(src="images/variant-mini4.png")
+                .text В багетной рамке на ваш выбор #[a(href="") Подробнее]
+                .price 
+                  .circle
+                    i.icon.icon-ruble-red
+                  span.text 1790 — 2590
+            .order-frames
+              .inner
+                .frame-item
+                  label(for="frame-item1")
+                  input.check(type="radio" name="frame" id="frame-item1" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item2")
+                  input.check(type="radio" name="frame" id="frame-item2" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item3")
+                  input.check(type="radio" name="frame" id="frame-item3" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item4")
+                  input.check(type="radio" name="frame" id="frame-item4" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item1")
+                  input.check(type="radio" name="frame" id="frame-item5" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item6")
+                  input.check(type="radio" name="frame" id="frame-item6" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item7")
+                  input.check(type="radio" name="frame" id="frame-item7" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item8")
+                  input.check(type="radio" name="frame" id="frame-item8" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item9")
+                  input.check(type="radio" name="frame" id="frame-item9" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item10")
+                  input.check(type="radio" name="frame" id="frame-item10" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item11")
+                  input.check(type="radio" name="frame" id="frame-item11" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+                .frame-item
+                  label(for="frame-item12")
+                  input.check(type="radio" name="frame" id="frame-item12" checked)
+                  h5 Рамка №1
+                  .text 2290 Р
+                  .frame-item-image(style="background-image: url(../images/frame.png)")
+                    span.circle
+        // end order-right
+        // start order-left
+        .order-left 
+          p Процесс заказа состоит из 4 шагов. Вы можете переходить вперед и назад по шагам не боясь, что данные потеряются. Если у вас возникнут сложности с заказом, то позвоните нам пожалуйста по указанным выше телефонам.
+          h4 Выберите текстуру
+          fieldset.order-choose-texture
+            label.texture-radio(name="texture")
+              input(type="radio" name="texture" data-texture="images/paper-texture1.jpg")
+              span.circle
+                img(src="images/texture-white.jpg")
+            label.texture-radio(name="texture")
+              input(type="radio" name="texture" data-texture="images/paper-texture2.jpg")
+              span.circle
+                img(src="images/texture-dark.jpg")
+            label.texture-radio(name="texture")
+              input(type="radio" name="texture" data-texture="images/paper-texture3.jpg" checked)
+              span.circle
+                img(src="images/texture-yellow.jpg")
+            label.texture-radio(name="texture")
+              input(type="radio" name="texture" data-texture="images/paper-texture4.jpg")
+              span.circle
+                img(src="images/texture-red.jpg")
+          .order-preview
+            .order-preview-gallery
+              a.order-preview-gallery-link.img-popup-link(href="images/sample1.jpg" style="background-image: url(images/sample-mini1.jpg)")
+              a.order-preview-gallery-link.img-popup-link(href="images/sample2.jpg" style="background-image: url(images/sample-mini2.jpg)")
+            .order-preview-image(style="background-image: url(images/paper-texture3.jpg)")
+              img(src="images/frame.png" alt="")
+          .order-overall
+            .range.range-single
+              .range-block
+                span.word Стоимость по выбраным параметрам
+                .price 
+                  span 2390
+                  i.ruble e
+            .btn-wrap
+              a.btn.btn-icon(href="")
+                span.text Далее
+                i.icon.icon-arr-thin-right
+        // end order-left

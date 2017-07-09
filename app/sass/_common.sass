@@ -1,3 +1,4 @@
+// Поправить футер. (на внутренних он должен быть менее заполнен)
 // sprites
 +spritesSelectors($spritesheet-sprites)
 
@@ -107,6 +108,8 @@ svg path
 
 .icon-cart:after
   +sprite($cart-red)
+.icon-arr-thin-right:after
+  +sprite($arr-thin-orange-right)
 /* start socials */
 .socials
   text-align: center
@@ -215,6 +218,7 @@ svg path
   +tr()
   display: inline-block
   vertical-align: middle
+  text-align: center
   border: 1px solid #7f7f7f
   width: 32px
   height: 32px
@@ -339,15 +343,21 @@ svg path
       color: #191919
       opacity: .8
       line-height: 1
-    .price
+    .price, .text
       font-size: 36px
       font-weight: 400
       line-height: 1
+  &-caption
+    opacity: .8
+    color: #191919
+    margin-top: 14px
   &-single
     .range-block
       padding-right: 0
       &:first-child:after
         display: none
+  &-lined
+    border-bottom: 1px solid #e6e6e6
 
 .ruble
   line-height: 1
@@ -390,12 +400,12 @@ svg path
   &:hover
     background-color: white
     color: $color-red
+    .icon:before
+      opacity: 0
+    .icon:after
+      opacity: 1
     .circle
       border-color: $color-red
-      .icon:before
-        opacity: 0
-      .icon:after
-        opacity: 1
     &:after
       border-color: $color-red
   &-large
@@ -455,6 +465,9 @@ svg path
 .colored-yellow
   color: $color-yellow
 
+.colored-gray
+  color: #7d7d7d
+
 .swiper-pagination-bullet
   background-color: transparent
   border: 1px solid #848381
@@ -479,3 +492,44 @@ svg path
   &.aos-animate
     transform: translateX(0)
     opacity: 1
+
+.select-block
+  display: block
+  margin: 10px 2px 10px 0
+  +rmin($screen-sm)
+    width: 120px
+    display: inline-block
+    &-month
+      width: 190px
+
+.selectize-control.single
+  .selectize-input
+    display: block
+    background: none
+    background-color: transparent
+    border-radius: 0
+    border-color: #a8a8a8
+    color: #0a1623
+    padding-top: 17px
+    padding-bottom: 17px
+    padding-left: 24px
+    font-size: 20px
+    .item
+      line-height: 1.2
+    input
+      opacity: .7
+      color: #000
+      font-size: 20px
+      +calibri(400)
+    &:after
+      +sprite($arr-down-red)
+      right: 18px
+    &.dropdown-active
+      &:after
+        transform: rotate(-180deg) translateY(-1px)
+
+.selectize-dropdown
+  .option
+    font-size: 18px
+    padding-top: 10px
+    padding-bottom: 11px

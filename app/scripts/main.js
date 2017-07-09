@@ -88,4 +88,46 @@ $(document).ready(function () {
   // magnificPopup
   $('.popup-link').magnificPopup({type: 'inline', showCloseBtn: false, removalDelay: 300, mainClass: 'mfp-move-horizontal'});
 
+  $('.js-select').selectize();
+
+  // переключение табов
+  var $tabs = $('.tab-pane');
+
+  var tabsSliderSettings = {
+    onSlideChangeStart: function (swiper) {
+      var idx = swiper.realIndex;
+      $('.tabs')
+        .find('.tab-pane')
+        .removeClass('js-active')
+        .eq(idx)
+        .addClass('js-active');
+    },
+    autoHeight: true,
+    noSwiping: true,
+    speed: 1500
+  };
+
+  var slider = null;
+
+  // Срабатывает при клике на таб
+  function onTabPaneClick(e) {
+    e.preventDefault();
+    var $target = $(this);
+    var idx = $target.index();
+    var $parent = $target.closest('.tabs');
+    var $tabs = $parent.find('.tab-pane');
+    var sliderName = $( $parent.data('slider') );
+    $tabs.removeClass('js-active');
+    $target.addClass('js-active');
+    $(sliderName).slideDown();
+    if (slider) {
+      slider.slideTo(idx);
+    } else {
+      slider = new Swiper(sliderName, tabsSliderSettings);
+      slider.slideTo(idx);
+    }
+  }
+
+  $tabs.click(onTabPaneClick);
+
 });
