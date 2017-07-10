@@ -1,0 +1,137 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Отзывы'
+block content
+  .layout.layout-testimonials.testimonials-page
+    .container
+      .testimonials-top
+        h1.section-heading Отзывы #[span.colored-red — более 3600 отзывов]
+        a.btn.btn-icon.popup-link(href="#popup-testimonials")
+          span.text Оставить отзыв
+          span.ic
+            include data/speech.svg
+      .years.js-years
+        a.year.js-year.active(href="#") 2017
+        a.year.js-year(href="#") 2016
+        a.year.js-year(href="#") 2015
+        a.year.js-year(href="#") 2014
+        a.year.js-year(href="#") 2013
+        a.year.js-year(href="#") 2012
+      .months.js-months
+        a.month.js-month(href="#") Январь
+        a.month.js-month(href="#") Февраль
+        a.month.js-month(href="#") Март
+        a.month.js-month(href="#") Апрель
+        a.month.js-month(href="#") Май
+        a.month.js-month.active(href="#") Июнь
+        a.month.js-month(href="#") Июль
+        a.month.js-month(href="#") Август
+        a.month.js-month(href="#") Сентябрь
+        a.month.js-month(href="#") Октябрь
+        a.month.js-month(href="#") Ноябрь
+        a.month.js-month(href="#") Декабрь
+      .testimonials-group
+        .testimonials-item(data-aos="fade-in")
+          aside(data-aos="fade-left" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.testimonials-item-name Светлана
+          .content(data-aos="fade-left" data-aos-delay="800")
+            h5 Отзыв
+            p Оформление заказа, уточнение заказа менеджером, получение готового заказа по электронной почте - все этапы заказа прошли "на ура" и "на одном дыхании"! При печати заказа в типографии, сотрудник типографии сказал, что качество готовой фотографии газеты сделано на очень профессиональном уровне. Распечатанная фотография в рамке под стеклом - это шедевр, который ничем не отличается от газеты 50-летней давности! #[a.js-read-testimonial(href="#") Читать весь отзыв...] #[span(style="display: none") Таймспринт, молодцы, так держать!!!] 
+        .testimonials-item(data-aos="fade-in")
+          aside(data-aos="fade-left" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.testimonials-item-name Виктория
+          .content(data-aos="fade-left" data-aos-delay="800")
+            h5 Отзыв
+            p Газету делали к 80-летию мамы. На сайте удобная форма заказа. Менеджер чётко, доступно прояснил некоторые моменты, предложил альтернативные варианты. Заказ привезли вовремя. Результатом очень довольны. Нареканий к исполнению нет. Подарок, действительно, приятный 
+        .testimonials-item(data-aos="fade-in")
+          aside(data-aos="fade-left" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.testimonials-item-name Георгий
+          .content(data-aos="fade-left" data-aos-delay="800")
+            h5 Отзыв
+            p Все грамотно и профессионально. Отлично!!! 
+        .testimonials-item(data-aos="fade-in")
+          aside(data-aos="fade-left" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.testimonials-item-name Светлана
+          .content(data-aos="fade-left" data-aos-delay="800")
+            h5 Отзыв
+            p Оформление заказа, уточнение заказа менеджером, получение готового заказа по электронной почте - все этапы заказа прошли "на ура" и "на одном дыхании"! При печати заказа в типографии, сотрудник типографии сказал, что качество готовой фотографии газеты сделано на очень профессиональном уровне. Распечатанная фотография в рамке под стеклом - это шедевр, который ничем не отличается от газеты 50-летней давности! #[a.js-read-testimonial(href="#") Читать весь отзыв...] #[span(style="display: none") Таймспринт, молодцы, так держать!!!] 
+        .testimonials-item(data-aos="fade-in")
+          aside(data-aos="fade-left" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.testimonials-item-name Виктория
+          .content(data-aos="fade-left" data-aos-delay="800")
+            h5 Отзыв
+            p Газету делали к 80-летию мамы. На сайте удобная форма заказа. Менеджер чётко, доступно прояснил некоторые моменты, предложил альтернативные варианты. Заказ привезли вовремя. Результатом очень довольны. Нареканий к исполнению нет. Подарок, действительно, приятный 
+        .testimonials-item(data-aos="fade-in")
+          aside(data-aos="fade-left" data-aos-delay="400")
+            .date
+              span.icon.icon-calendar
+              span 26.04.2017
+            h4.testimonials-item-name Георгий
+          .content(data-aos="fade-left" data-aos-delay="800")
+            h5 Отзыв
+            p Все грамотно и профессионально. Отлично!!! 
+    .testimonials-bottom
+      a.btn.btn-icon.popup-link(href="#popup-testimonials")
+        span.text Оставить отзыв
+        span.ic
+          include data/speech.svg
+    .pagination
+      a.active(href="#") 1 
+      a(href="#") 2
+      a(href="#") 3
+      a(href="#") 4
+      a(href="#") 5
+      a(href="#") 6
+      a(href="#") 7
+      a(href="#") 8
+      a(href="#") 9
+      a(href="#") 10
+      a(href="#") 11
+      a(href="#") ...
+      a(href="#") 376
+  // start other-items
+  .other-items
+    .container
+      h2.section-heading Наши другие оригинальные подарки
+      .row
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .other-items-block
+            .img
+              img(src="images/pravda-book.png" alt="Книга «Правда»")
+            h4 Книга «Правда»
+            p Эксклюзивный подарок начальнику, коллеге, #[br] родным на день рождения и юбилей
+            .price от 6 990 Р
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+            a(href="#").link Подробнее
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .other-items-block
+            .img
+              img(src="images/showcase-item1.png" alt="Газета «Правда»")
+            h4 Газета «Правда»
+            p Эксклюзивный подарок начальнику,  коллеге, #[br] родным на день рождения и юбилей
+            .price от 1 390 Р
+            a.btn.btn-icon(href="")
+              span.text Заказать
+              .circle
+                i.icon.icon-cart
+            a(href="#").link Подробнее
+  // end other-items

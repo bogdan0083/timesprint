@@ -31,7 +31,7 @@ header.header.js-header
             span info@timesprint.ru
   .header-bottom
     .container
-      .inner-container
+      .inner-container(class=headerMain ? '' : 'bordered')
         include _main-nav.pug
         a.delivery-link.delivery-link-animated(href="#")
           .delivery-car

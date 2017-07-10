@@ -130,4 +130,19 @@ $(document).ready(function () {
 
   $tabs.click(onTabPaneClick);
 
+  $('.js-read-testimonial').click(function (e) {
+    e.preventDefault();
+    $(this).next().show();
+    $(this).remove();
+  });
+
+
+  // Кастомный аккордеон
+  var $accordionTrigger = $('.js-accordion-trigger');
+  $accordionTrigger.click(function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.toggleClass('js-active');
+    $this.next().slideToggle();
+  });
 });

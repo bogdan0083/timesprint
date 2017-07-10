@@ -1,4 +1,5 @@
 // Поправить футер. (на внутренних он должен быть менее заполнен)
+// Выключить AOS на маленьких разрешениях
 // sprites
 +spritesSelectors($spritesheet-sprites)
 
@@ -397,6 +398,10 @@ svg path
     height: 40px
     .icon-cart
       top: -2px
+  .ic
+    vertical-align: middle
+    line-height: 1
+    display: inline-block
   &:hover
     background-color: white
     color: $color-red
@@ -406,6 +411,8 @@ svg path
       opacity: 1
     .circle
       border-color: $color-red
+    svg path
+      fill: $color-red
     &:after
       border-color: $color-red
   &-large
