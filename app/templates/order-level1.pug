@@ -35,7 +35,7 @@ block content
               label(for="order-variant1")
               .order-variant-content
                 .circle
-                  img(src="images/variant-mini1.png")
+                  img(src="images/variant-mini1.png" alt="Электронный вид")
                 .text Электронный вид #[a(href="#") Подробнее]
                 .price 
                   .circle
@@ -46,7 +46,7 @@ block content
               label(for="order-variant2")
               .order-variant-content
                 .circle
-                  img(src="images/variant-mini2.png")
+                  img(src="images/variant-mini2.png" alt="На бумаге")
                 .text На бумаге в уменьшенном форм. А3. Тубус #[a(href="") Подробнее]
                 .price 
                   .circle
@@ -57,7 +57,7 @@ block content
               label(for="order-variant3")
               .order-variant-content
                 .circle
-                  img(src="images/variant-mini3.png")
+                  img(src="images/variant-mini3.png" alt="На бумаге А2")
                 .text На бумаге в оригинальном форм. А2 #[a(href="") Подробнее]
                 .price 
                   .circle
@@ -68,7 +68,7 @@ block content
               label(for="order-variant4")
               .order-variant-content
                 .circle
-                  img(src="images/variant-mini4.png")
+                  img(src="images/variant-mini4.png" alt="В багетной рамке")
                 .text В багетной рамке на ваш выбор #[a(href="") Подробнее]
                 .price 
                   .circle
@@ -169,25 +169,25 @@ block content
             label.texture-radio(name="texture")
               input(type="radio" name="texture" data-texture="images/paper-texture1.jpg")
               span.circle
-                img(src="images/texture-white.jpg")
+                img(src="images/texture-white.jpg" alt="Светлая текстура")
             label.texture-radio(name="texture")
               input(type="radio" name="texture" data-texture="images/paper-texture2.jpg")
               span.circle
-                img(src="images/texture-dark.jpg")
+                img(src="images/texture-dark.jpg" alt="Темная текстура")
             label.texture-radio(name="texture")
               input(type="radio" name="texture" data-texture="images/paper-texture3.jpg" checked)
               span.circle
-                img(src="images/texture-yellow.jpg")
+                img(src="images/texture-yellow.jpg" alt="Желтая текстура")
             label.texture-radio(name="texture")
               input(type="radio" name="texture" data-texture="images/paper-texture4.jpg")
               span.circle
-                img(src="images/texture-red.jpg")
+                img(src="images/texture-red.jpg" alt="Красная текстура")
           .order-preview
             .order-preview-gallery
               a.order-preview-gallery-link.img-popup-link(href="images/sample1.jpg" style="background-image: url(images/sample-mini1.jpg)")
               a.order-preview-gallery-link.img-popup-link(href="images/sample2.jpg" style="background-image: url(images/sample-mini2.jpg)")
             .order-preview-image(style="background-image: url(images/paper-texture3.jpg)")
-              img(src="images/frame.png" alt="")
+              img(src="images/frame.png" alt="Рамка")
           .order-overall
             .range.range-single
               .range-block

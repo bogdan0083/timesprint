@@ -53,7 +53,7 @@
           width: 100%
           border-top: 1px solid #777574
           border-bottom: 1px solid #bdbab9
-          // z-index: 10
+          +tr()
       +rmin($screen-md)
         padding-left: 40px
         padding-right: 40px
@@ -65,6 +65,8 @@
         left: 0
         top: 0
         background: url(../images/newspaper.svg) no-repeat center
+        opacity: .4
+        +tr()
       .wrap:after
         content: ''
         width: 1px
@@ -104,6 +106,7 @@
         top: 50%
         transform: translateY(-50%)
         opacity: .6
+        +tr()
         +gray()
       &.active
         &:after
@@ -125,6 +128,15 @@
         &:nth-child(2)
           &:before
             background-image: url(../images/label-yellow.png)
+      &:hover
+        .wrap:before
+          opacity: 1
+        p
+          color: #383838
+          text-decoration: none
+        img
+          filter: none
+          opacity: 1
   &-middle
     +clr()
   &-leftside, &-center, &-rightside
@@ -186,7 +198,7 @@
       display: block
       margin: 10px auto 0
       +rmin($screen-lg)
-        margin-left: 40px
+        margin-left: 24px
         display: inline-block
         margin-top: 2px
     +rmin($screen-sm)
@@ -290,7 +302,6 @@
     +rmin($screen-lg)
       padding-left: 30px
       text-align: left
-
   &-bottom
     text-align: center
     border-top: 1px solid #a9a4a2
@@ -388,6 +399,7 @@
           line-height: 55px
           top: 10px
           left: 0
+          color: $color-yellow
         &:last-child
           &:after
             content: ''
@@ -556,7 +568,7 @@
     width: 100%
     max-width: 400px
     +rmin($screen-lg)
-      max-width: 540px
+      max-width: 570px
   .pic-mini
     padding: 15px
     display: inline-block
@@ -1103,9 +1115,9 @@
 .additional-items
   padding-left: 15px
   padding-right: 15px
-  padding: 40px 0
+  padding: 50px 0
   .section-heading
-    max-width: 750px
+    max-width: 800px
     margin: 0 auto
     line-height: 1.4
   +rmin($screen-sm)
@@ -1139,11 +1151,12 @@
           border-color: $color-yellow
           svg path
             fill: $color-yellow
-      &:hover
-        .circle
-          background-color: $color-yellow
-          svg path
-            fill: $color-yellow
+        &:hover
+          .circle
+            background-color: $color-yellow
+            svg path
+              fill: white
+
 /* start additional-item */
 .additional-item
   border: 1px solid #d9d9d9
@@ -1519,6 +1532,7 @@
 
 /* start book-details */
 .book-details
+  border-bottom: 1px solid #d9d9d9
   +rmin($screen-sm)
     display: -webkit-flex
     display: -ms-flex
